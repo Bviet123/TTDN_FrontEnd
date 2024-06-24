@@ -1,0 +1,297 @@
+.App {
+  background-color: #D3D3D3;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.App-main {
+  display: flex;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.Column_Container {
+  flex-direction: column;
+  width: 20%;
+  margin-right: 5px;
+
+}
+
+.Column_Container_right {
+  flex-direction: column;
+  width: 20%;
+
+}
+
+.search_container {
+  width: 100%;
+  position: sticky;
+  top: 60px;
+  background-color: #B2BEB5;
+  border-radius: 10px;
+}
+
+.Search_form {
+  padding: 10px;
+}
+
+.input_text {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border: solid;
+  border-radius: 10px;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_search {
+  margin-top: 5px;
+  width: 80px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: #6699CC;
+  color: black;
+  border-radius: 20px;
+
+}
+
+.aside-left {
+  order: -1;
+  width: 100%;
+  position: sticky;
+  height: fit-content;
+  top: 180px;
+  background-color: #B2BEB5;
+  border-radius: 10px;
+
+}
+
+.Type_Text {
+  position: sticky;
+  top: 160px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.Type {
+  font-size: 15px;
+  text-indent: 0;
+}
+
+.News_Select {
+  margin: 5px;
+}
+
+.News_A {
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+
+}
+
+.News_A:hover {
+  opacity: 1;
+}
+
+.News_Types {
+  display: block;
+  font-size: 20px;
+  border-bottom: 2px solid;
+
+}
+
+.aside-right {
+  order: 2;
+  width: 100;
+  padding: 5px;
+  height: fit-content;
+  background-color: #B2BEB5;
+  border-radius: 10px;
+
+}
+.aside-around {
+  border: 1px solid;
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+
+.content {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 20px;
+  width: 60%;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #B2BEB5;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.App-header {
+  margin: 10px;
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.App-nav {
+  display: flex;
+  background-color: #B2BEB5;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+.resize-button {
+  display: none;
+  position: relative;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.dropdown-menu {
+  display:none;
+  justify-content: center;
+  position: absolute;
+  width: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: fit-content;
+  border-radius: 10px;
+}
+.drop-a{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav-a {
+  padding: 5px;
+  margin-left: 50px;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+.nav-a2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+}
+.nav-a2:hover {
+  border-bottom:2px solid;
+  opacity: 1;
+}
+.nav-a:hover {
+  background-color: #D3D3D3;
+}
+
+.nav-div-block {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.login-button {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.image_slider {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.HolderSlide {
+  width: 100%;
+  height: 200px;
+}
+
+span {
+  font-size: 23px;
+  padding: 10px;
+}
+
+.News_Item {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  padding: 7px;
+}
+
+.Pic_item {
+  display: flex;
+  height: auto;
+  max-height: 200px;
+  width: 50%;
+  justify-content: center;
+  margin: 5px;
+  margin-left: 25%;
+}
+
+.text_link {
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+}
+
+.text_link:hover {
+  opacity: 1;
+}
+
+.text_div {
+  margin: 5px;
+}
+
+.text_item {
+  font-size: 25px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #B2BEB5;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .Column_Container_right {
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+  }
+  .Column_Container {
+    width: 40%;
+  }
+  .nav-div-block {
+    display: none;
+  }
+  .resize-button {
+    display: flex;
+  }
+}

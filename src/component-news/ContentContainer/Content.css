@@ -1,0 +1,88 @@
+  
+  .content {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 20px;
+      width: 60%;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: #B2BEB5;
+  }
+
+  .drop-a {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+
+  .nav-a2 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      opacity: 0.7;
+  }
+
+  .nav-a2:hover {
+      border-bottom: 2px solid;
+      opacity: 1;
+  }
+
+  .nav-a:hover {
+      background-color: #D3D3D3;
+  }
+
+  .image_slider {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+  }
+
+  .HolderSlide {
+      width: 100%;
+      height: 200px;
+  }
+
+  span {
+      font-size: 23px;
+      padding: 10px;
+  }
+
+  .News_Item {
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+      margin: 10px;
+      padding: 7px;
+  }
+
+  .Pic_item {
+      display: flex;
+      height: auto;
+      max-height: 200px;
+      width: 50%;
+      justify-content: center;
+      margin: 5px;
+      margin-left: 25%;
+  }
+
+  .text_link:hover {
+      opacity: 1;
+  }
+
+  .text_div {
+      margin: 5px;
+  }
+
+  .text_item {
+      font-size: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+      .text_item{
+          font-size: 13px;
+      }
+  }

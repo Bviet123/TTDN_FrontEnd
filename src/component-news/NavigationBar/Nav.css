@@ -1,0 +1,107 @@
+.App-header {
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.App-nav {
+    display: flex;
+    background-color: #B2BEB5;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resize-button {
+    display: none;
+    position: relative;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+    width: 30px;
+    height: auto;
+}
+
+.nav-div-block {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.nav-a {
+    padding: 5px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.login-button {
+    display: flex;
+    width: 100px;
+    font-weight: 650;
+    text-decoration: none;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.login-button:hover {
+    background-color: aliceblue;
+}
+
+.dropdown-menu {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: fit-content;
+    border-radius: 10px;
+}
+
+.drop-a {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-a2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+
+.nav-a2:hover {
+    border-bottom: 2px solid;
+    opacity: 1;
+}
+
+.nav-a:hover {
+    background-color: #D3D3D3;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-div-block {
+      display: none;
+    }
+    .resize-button {
+      display: flex;
+    }
+  }

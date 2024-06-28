@@ -85,4 +85,7 @@
       .text_item{
           font-size: 13px;
       }
+      .content {
+        width: 100%;
+      }
   }

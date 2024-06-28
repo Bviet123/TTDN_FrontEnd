@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './Left.css';
+import ArrowIcon from './arrow_icon.png';
 
 function Left() {
-
+    const [isDrop, setIsDrop] = useState(false);
     return (
         <div className='Column_Container'>
             <div className='search_container'>

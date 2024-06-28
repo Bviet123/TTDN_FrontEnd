@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    height:fit-content;
+    height: fit-content;
     background-color: #B2BEB5;
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,7 @@
     font-size: 13px;
     margin: 3px;
 }
+
 .footer-else {
     border-left: 1px solid;
 }
@@ -35,4 +36,4 @@
     .footer-infor {
         display: none;
     }
-  }
+}

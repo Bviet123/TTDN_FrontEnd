@@ -88,4 +88,7 @@
     .News_Types {
      font-size: 15px;
     }
+    .Column_Container {
+        display: none;
+    }
 }

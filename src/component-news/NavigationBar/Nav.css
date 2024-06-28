@@ -4,6 +4,8 @@
     top: 0;
     right: 0;
     z-index: 100;
+    flex-direction: row;
+    background-color: #D3D3D3;
 }
 
 .App-nav {
@@ -14,7 +16,30 @@
     align-items: center;
     justify-content: space-between;
 }
+.resize-nav {
+    display: none;
+    width: 100%;
+    height: 70px;
+    background-color: #949494;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    align-items: center;
+    overflow-x: auto;
+}
+.resize-nav span {
+    width: 100;
+    font-size: 15px;
+    height: auto;
+    border: 2px solid white;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
 
+}
+.resize-nav span:hover {
+    background: wheat;
+}
 .resize-button {
     display: none;
     position: relative;
@@ -37,6 +62,31 @@
     text-decoration: none;
     color: black;
     padding: 10px;
+    border-radius: 20px;
+}
+.nav-search {
+    display: flex;
+    border: 2px solid;
+    width: 200px;
+}
+.formSearch {
+    width: 230px;
+    display: none;
+}
+.nav_input_text {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+.nav_btn_search {
+    margin-left: 3px;
+    width: 80px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: #6699CC;
+    color: black;
     border-radius: 20px;
 }
 
@@ -103,5 +153,11 @@
     }
     .resize-button {
       display: flex;
+    }
+    .formSearch {
+        display: flex;
+    }
+    .resize-nav {
+        display: flex;
     }
   }

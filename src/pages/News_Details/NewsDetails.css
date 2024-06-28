@@ -17,3 +17,39 @@
     width: 100%;
 }
 
+.content-right {
+    float: right;
+
+}
+
+.content-left {
+    float: left;
+}
+
+.content-title {
+    justify-content: center;
+    margin-top: 60px;
+    font-size: x-large;
+    font-weight: 650;
+
+}
+
+.content-footer {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    float: right;
+
+}
+
+
+.content_pic_item_center {
+    width: 100px;
+}
+
+.content_text_div_center {
+    width: 100px;
+}
+.NewsDetails_Text {
+    text-align: justify;
+}

@@ -5,12 +5,6 @@
 
 }
 
-.App-main {
-  display: flex;
-  margin-left: 3px;
-  margin-right: 3px;
-}
-
 .container {
   display: flex;
   flex-direction: row;

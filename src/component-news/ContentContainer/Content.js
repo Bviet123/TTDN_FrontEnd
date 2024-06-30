@@ -1,13 +1,16 @@
 import './Content.css';
 import itemPic from './PlayHolder.png';
+import PauseOnHover from './silder';
 
 
 function Content() {
 
     return (
         <div className="content">
-            <div className='image_slider'>
-                <img className='HolderSlide' src={itemPic} alt="The holder pictrue" />
+            <div className='slider-slide'>
+                <div className='slider-div'>
+                    <PauseOnHover />
+                </div>
             </div>
             <div className="News_container">
                 <div className="News_Item">

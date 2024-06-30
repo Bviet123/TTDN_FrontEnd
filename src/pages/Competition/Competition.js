@@ -4,7 +4,6 @@ import Nav from '../../component-news/NavigationBar/Nav';
 import Left from '../../component-news/LeftContainer/Left';
 import Right from '../../component-news/RightContainer/Right';
 import Foot from '../../component-news/FootContainer/Foot';
-import CompetitionPic from '../../image/PlayHolder.png';
 
 
 function Competition() {

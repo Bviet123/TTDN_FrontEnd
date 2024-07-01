@@ -10,6 +10,8 @@ import {
 import Login from './pages/Login/Login';
 import NewsDetail from './pages/News_Details/NewsDetails';
 import Competition from './pages/Competition/Competition';
+import Conference from './pages/Conference/Conference';
+import Seminar from './pages/Seminar/Seminar';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: "Competition",
     element: <Competition/>,
+  },
+  {
+    path: "Conference",
+    element: <Conference/>,
+  },
+  {
+    path: "Seminar",
+    element: <Seminar/>,
   },
 ]);
 

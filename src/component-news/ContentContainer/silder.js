@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './slider.css'
 import Pic1 from '../../image/PlayHolder.png';
-import Pic2 from '../../image/background.jpg';
-import Pic3 from '../../image/gackgroundKHCN.jpeg';
-import Pic4 from '../../image/login-background.jpg';
-import Pic5 from '../../image/logo-footer.jpg';
+import Pic2 from '../../image/PlayHolder.png';
+import Pic3 from '../../image/tải xuống (1).jpeg';
+import Pic4 from '../../image/meme_fish.jpg';
+import Pic5 from '../../image/Power.jpeg';
 import Pic6 from '../../image/PlayHolder.png';
 
 

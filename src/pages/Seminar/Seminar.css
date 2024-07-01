@@ -1,0 +1,91 @@
+.semi-App {
+    background-color: #D3D3D3;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.semi-main {
+    display: flex;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.semi-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.semi-content {
+    width: 60%;
+    background-color:#B2BEB5;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.semi-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 2px darkblue;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.semi-row {
+    display: flex;
+    justify-content: space-between;
+}
+.semi-cell a {
+    text-decoration: none;
+}
+#semi-title {
+   color: blue;
+   font-size: 18px;
+   padding-left: 10px;
+}
+#semi-regis {
+    width: fit-content;
+    display: flex;
+    border: 1px solid blue;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+#semi-regis:hover {
+    background-color: blue;
+    color: white;
+}
+#semi-description {
+    display: flex;
+    font-size: 14px;
+    text-align: justify;
+}
+#semi-upuser {
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+    padding-left: 5px;
+}
+#semi-update {
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+    padding-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    .semi-content {
+        width: 100%;
+    }
+    #semi-regis{
+        width: 90px;
+    }
+}

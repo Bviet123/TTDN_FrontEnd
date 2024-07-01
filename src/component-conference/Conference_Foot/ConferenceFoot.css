@@ -1,0 +1,44 @@
+.Confe-footer {
+    width: 100%;
+    height: fit-content;
+    background-color: #B2BEB5;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.Confe-footer-infor {
+    margin: 10px;
+    width: fit-content;
+    height: auto;
+    border-right: 1px solid;
+}
+
+.Confe-footer-contact {
+    width: fit-content;
+    font-size: 13px;
+    margin: 3px;
+}
+
+.Confe-footer-else {
+    border-left: 1px solid;
+}
+
+.Confe-footer-size {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .Confe-footer-infor {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .Confe-footer-else {
+        display: none;
+    }
+}

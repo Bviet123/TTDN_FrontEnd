@@ -1,0 +1,91 @@
+.confe-App {
+    background-color: #D3D3D3;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.confe-main {
+    display: flex;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.confe-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.confe-content {
+    width: 60%;
+    background-color:#B2BEB5;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.confe-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 2px darkblue;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.confe-row {
+    display: flex;
+    justify-content: space-between;
+}
+.confe-cell a {
+    text-decoration: none;
+}
+#confe-title {
+   color: blue;
+   font-size: 18px;
+   padding-left: 10px;
+}
+#confe-regis {
+    width: fit-content;
+    display: flex;
+    border: 1px solid blue;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+#confe-regis:hover {
+    background-color: blue;
+    color: white;
+}
+#confe-description {
+    display: flex;
+    font-size: 14px;
+    text-align: justify;
+}
+#confe-upuser {
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+    padding-left: 5px;
+}
+#confe-update {
+    font-size: 14px;
+    opacity: 0.7;
+    font-style: italic;
+    padding-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    .confe-content {
+        width: 100%;
+    }
+    #confe-regis{
+        width: 90px;
+    }
+}

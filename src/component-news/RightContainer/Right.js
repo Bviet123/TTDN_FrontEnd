@@ -1,5 +1,5 @@
 import './Right.css';
-import Pic from './PlayHolder.png';
+import Pic from '../../image/PlayHolder.png';
 
 
 function Right() {

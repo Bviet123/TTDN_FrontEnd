@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import './Left.css';
-import ArrowIcon from './arrow_icon.png';
 
 function Left() {
-    const [isDrop, setIsDrop] = useState(false);
+
     return (
         <div className='Column_Container'>
             <div className='search_container'>
@@ -21,11 +19,11 @@ function Left() {
             </div>
             <div className="aside-left">
                 <div className='News_Select'>
-                    <a href='#' className='News_A'><span className='News_Types'>Giới trẻ</span></a>
+                    <a href='#' className='News_A'><span className='News_Types'>Tất cả</span></a>
                     <a href='#' className='News_A'><span className='News_Types'>Thể thao</span></a>
-                    <a href='#' className='News_A'><span className='News_Types'>Tin nóng</span></a>
-                    <a href='#' className='News_A'><span className='News_Types'>Tin mới</span></a>
-                    <a href='#' className='News_A'><span className='News_Types'>Tin siêu siêu nóng</span></a>
+                    <a href='#' className='News_A'><span className='News_Types'>Văn hóa</span></a>
+                    <a href='#' className='News_A'><span className='News_Types'>Giáo dục</span></a>
+                    <a href='#' className='News_A'><span className='News_Types'>Khoa học</span></a>
                 </div>
             </div>
         </div>

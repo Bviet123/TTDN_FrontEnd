@@ -38,6 +38,22 @@ function Content() {
                     </div>
                 </div>
             </div>
+            <div className='pagination'>
+                <button className='PagesButton'>Pre</button>
+                <div className='pagesNum'>
+                    <a>1</a>
+                    <a>2</a>
+                    <a>3</a>
+                    <a>4</a>
+                    <a>5</a>
+                    <a>6</a>
+                    <a>7</a>
+                    <a>8</a>
+                    <a>9</a>
+                    <a>10</a>
+                </div>
+                <button className='PagesButton'>Next</button>
+            </div>
         </div>
     );
 }

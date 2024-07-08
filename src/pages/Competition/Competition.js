@@ -10,10 +10,10 @@ function Competition() {
 
     return (
         <div className="competition-App">
-            <CompetitionNavNav/>
+            <CompetitionNavNav />
             <main className="competition-main">
                 <div className="competition-container">
-                    <CompetitionLeft/>
+                    <CompetitionLeft />
                     <div className="competition-content">
                         <div className='competition-table'>
                             <div class="competition-row">
@@ -73,12 +73,28 @@ function Competition() {
                                 </div>
                                 <div class="competition-cell" id="competition-update"><p>Ngày đăng : 20/01/2004</p></div>
                             </div>
-                        </div>                       
+                        </div>
+                        <div className='Compe-pagination'>
+                            <button className='Compe-PagesButton'>Pre</button>
+                            <div className='Compe-pagesNum'>
+                                <a>1</a>
+                                <a>2</a>
+                                <a>3</a>
+                                <a>4</a>
+                                <a>5</a>
+                                <a>6</a>
+                                <a>7</a>
+                                <a>8</a>
+                                <a>9</a>
+                                <a>10</a>
+                            </div>
+                            <button className='Compe-PagesButton'>Next</button>
+                        </div>
                     </div>
-                    <Competition_Right/>
+                    <Competition_Right />
                 </div>
             </main>
-            <CompetitionFooter/>
+            <CompetitionFooter />
         </div>
     );
 }

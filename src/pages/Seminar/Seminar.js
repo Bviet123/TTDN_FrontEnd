@@ -9,10 +9,10 @@ function Seminar() {
 
     return (
         <div className="semi-App">
-            <SeminarNav/>
+            <SeminarNav />
             <main className="semi-main">
                 <div className="semi-container">
-                    <SeminarLeft/>
+                    <SeminarLeft />
                     <div className="semi-content">
                         <div className='semi-table'>
                             <div class="semi-row">
@@ -72,12 +72,28 @@ function Seminar() {
                                 </div>
                                 <div class="semi-cell" id="semi-update"><p>Ngày đăng : 20/01/2004</p></div>
                             </div>
-                        </div>                     
+                        </div>
+                        <div className='semi-pagination'>
+                            <button className='semi-PagesButton'>Pre</button>
+                            <div className='semi-pagesNum'>
+                                <a>1</a>
+                                <a>2</a>
+                                <a>3</a>
+                                <a>4</a>
+                                <a>5</a>
+                                <a>6</a>
+                                <a>7</a>
+                                <a>8</a>
+                                <a>9</a>
+                                <a>10</a>
+                            </div>
+                            <button className='semi-PagesButton'>Next</button>
+                        </div>
                     </div>
-                    <SeminarRight/>
+                    <SeminarRight />
                 </div>
             </main>
-            <SeminarFoot/>
+            <SeminarFoot />
         </div>
     );
 }

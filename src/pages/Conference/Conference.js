@@ -73,6 +73,22 @@ function Conference() {
                                 </div>
                                 <div class="confe-cell" id="confe-update"><p>Ngày đăng : 20/01/2004</p></div>
                             </div>
+                        </div>
+                        <div className='confe-pagination'>
+                            <button className='confe-PagesButton'>Pre</button>
+                            <div className='confe-pagesNum'>
+                                <a>1</a>
+                                <a>2</a>
+                                <a>3</a>
+                                <a>4</a>
+                                <a>5</a>
+                                <a>6</a>
+                                <a>7</a>
+                                <a>8</a>
+                                <a>9</a>
+                                <a>10</a>
+                            </div>
+                            <button className='confe-PagesButton'>Next</button>
                         </div>                     
                     </div>
                     <ConferenceRight/>

@@ -81,11 +81,58 @@
     font-style: italic;
     padding-right: 10px;
 }
+
+.confe-pagination {
+    width: 90%;
+    display: flex   ;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.confe-pagesNum {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.confe-pagesNum a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    cursor: pointer;
+    width: 20px;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.confe-pagesNum a:hover {
+    background-color: blue;
+    color: white;
+}
+
+.confe-PagesButton {
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.confe-PagesButton:active {
+    background-color: blue;
+    color: white;
+}
+
 @media screen and (max-width: 768px) {
     .confe-content {
         width: 100%;
     }
     #confe-regis{
         width: 90px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .confe-main{
+        width: 90%;
+        margin: 5px;
     }
 }

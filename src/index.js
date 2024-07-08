@@ -12,6 +12,7 @@ import NewsDetail from './pages/News_Details/NewsDetails';
 import Competition from './pages/Competition/Competition';
 import Conference from './pages/Conference/Conference';
 import Seminar from './pages/Seminar/Seminar';
+import Admin from './pages/Admin/AdminPages/Admin';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
     path: "Seminar",
     element: <Seminar/>,
   },
+  {
+    path: "Admin",
+    element: <Admin/>,
+  },
+  
 ]);
 
 

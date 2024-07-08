@@ -11,7 +11,7 @@
     margin-right: 3px;
 }
 
-.container {
+.Detail-container {
     display: flex;
     flex-direction: row;
     width: 100%;

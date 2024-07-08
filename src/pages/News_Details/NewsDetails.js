@@ -12,7 +12,7 @@ function NewsDetail() {
         <div className="App">
             <Nav/>
             <main className="App-main">
-                <div className="container">
+                <div className="Detail-container">
                     <Left/>
                     <div className="content">
                         <div className='content-right'>

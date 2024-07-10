@@ -12,7 +12,8 @@ import NewsDetail from './pages/News_Details/NewsDetails';
 import Competition from './pages/Competition/Competition';
 import Conference from './pages/Conference/Conference';
 import Seminar from './pages/Seminar/Seminar';
-import Admin from './pages/Admin/AdminPages/Admin';
+import Account from './pages/Admin/Account/Account';
+import AddAccount from './pages/Admin/Account/AddAccount/AddAccount';
 
 const router = createBrowserRouter([
   {
@@ -41,8 +42,12 @@ const router = createBrowserRouter([
   },
   {
     path: "Admin",
-    element: <Admin/>,
+    element: <Account/>,
   },
+  {
+    path: "AddAccount",
+    element: <AddAccount/>
+  }
   
 ]);
 

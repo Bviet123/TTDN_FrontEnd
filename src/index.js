@@ -14,6 +14,9 @@ import Conference from './pages/Conference/Conference';
 import Seminar from './pages/Seminar/Seminar';
 import Account from './pages/Admin/Account/Account';
 import AddAccount from './pages/Admin/Account/AddAccount/AddAccount';
+import LoginAdmin from './pages/Admin/Admin-Login/AdminLogin';
+import UserInfo from './pages/User/User_Info/UserInfo';
+import InfoUpdate from './pages/User/User_Info_update/InfoUpdate';
 
 const router = createBrowserRouter([
   {
@@ -47,8 +50,19 @@ const router = createBrowserRouter([
   {
     path: "AddAccount",
     element: <AddAccount/>
-  }
-  
+  },
+  {
+    path: "LoginAdmin",
+    element: <LoginAdmin/>
+  },
+  {
+    path: "UserInfo",
+    element: <UserInfo/>
+  },
+  {
+    path: "UserInfoUpdate",
+    element: <InfoUpdate/>
+  },
 ]);
 
 

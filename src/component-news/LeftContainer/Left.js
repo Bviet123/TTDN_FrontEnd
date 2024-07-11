@@ -9,7 +9,7 @@ function Left() {
                     <form action="/search">
                         <input className='input_text' type="search" name="query" placeholder="Nhập từ khóa...." />
                         <div className='btn_container'>
-                            <button className='btn_search' type="submit">Tìm kiếm</button>
+                            <button id='btn_search' type="submit">Tìm kiếm</button>
                         </div>
                     </form>
                 </div>

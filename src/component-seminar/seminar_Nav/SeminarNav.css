@@ -31,6 +31,10 @@
     width: 100%;
     padding: 10px;
     display: flex;
+
+}
+.semi-nav-div-block b {
+    margin-left: 5%;
 }
 
 .semi-nav-a {
@@ -41,6 +45,56 @@
     padding: 10px;
     border-radius: 20px;
 }
+
+.semi-avatar-container {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.semi-avatar-inner{
+    display: flex;
+}
+
+.semi-avatar-container .semi-avatar-inner span {
+    font-size: 15px;
+    order: 2;
+    color: blue;
+    display: flex;
+    float: right;
+    height: 100%;
+    align-content: center;
+}
+.semi-UserHolder {
+    order: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.semi-avatadrop {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    position: absolute;
+    top: 50px;
+    width: 125px;
+    background-color: lightgray;
+}
+.semi-avatadrop span {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.semi-avatadrop span a {
+    text-decoration: none;
+    color: black;
+}
+.semi-avatadrop span:hover {
+    background-color: blue;
+    color: white;
+}
+
 .semi-nav-search {
     display: flex;
     border: 2px solid;
@@ -48,7 +102,8 @@
 }
 .semi-formSearch {
     width: 230px;
-    display: none;
+    padding-top: 10px;
+    display: flex;
 }
 .semi-nav_input_text {
     width: 150px;
@@ -80,7 +135,7 @@
 }
 
 .semi-drop-a {
-    width: 200px;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -105,16 +160,18 @@
 }
 .semi-nav-a2 {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 90%;
     margin-top: 10px;
-    padding: 10px;
     text-decoration: none;
     color: black;
     opacity: 0.7;
 }
 
 .semi-nav-a2:hover {
+    background-color: rgb(82, 82, 243);
     opacity: 1;
 }
 

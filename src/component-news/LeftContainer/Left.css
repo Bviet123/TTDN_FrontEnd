@@ -30,7 +30,7 @@
     justify-content: center;
 }
 
-.btn_search {
+#btn_search {
     margin-top: 5px;
     width: 80px;
     height: 25px;

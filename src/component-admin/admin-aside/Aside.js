@@ -5,11 +5,10 @@ function Aside() {
 
 
     return (
-        <div class="sidebar">
             <div class="sidebar-content">
-                <ul class="nav nav-secondary">
+                <ul class="nav-secondary">
                     <li>
-                        <a href="#dashboard">
+                        <a href="Admin">
                             <p>Admin</p>
                         </a>
                     </li>
@@ -47,7 +46,6 @@ function Aside() {
                     </li>
                 </ul>
             </div>
-        </div>
     );
 }
 

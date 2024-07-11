@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 import './Account2.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
+import IconHidden from '../../../image/nav-icon.png';
 
 
 function Account() {
+    const [isSidebarVisible, setIsSidebarVisible] = useState(true); 
 
-
+    const handleClickImage = () => {
+        setIsSidebarVisible((prevState) => !prevState);
+    };
     return (
         <div class="wrapper">
-            <Aside/>
+            {isSidebarVisible && (
+                <div class="sidebar">
+                    <Aside />
+                </div>
+            )}
             <div class="main-panel">
                 <div class="container">
                     <div class="page-inner">
                         <div class="card">
                             <div class="card-header">
-                                <span id='user-text'>Người Dùng</span>
-                                <a id='addbutton' href='AddAccount'>Thêm tài khoản</a>
+                                <img
+                                    className="picHidden"
+                                    src={IconHidden}
+                                    alt="my pic"
+                                    onClick={handleClickImage} 
+                                />
+                                <a className='addbutton' href='AddAccount'>Thêm tài khoản</a>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

@@ -1,59 +1,69 @@
-.AddAcount-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f2f2f2;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+.wrapper {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.AddAccount-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.div-form {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.Account-input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc  ;
+  border-radius: 3px;
+
+}
+
+.btn-submit {
+  width: 97%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .radio-buttons {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
-  }
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.radio-buttons input[type="radio"] {
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
   
-  .radio-buttons input[type="radio"] {
-    margin-right: 10px;
-  }
+}

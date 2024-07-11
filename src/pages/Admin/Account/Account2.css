@@ -12,32 +12,43 @@
     width: 100%;
 }
 
+.picHidden {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
 .page-inner {
     width: 100%;
 }
+
 .card-header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
     border: 1px solid;
-    border-top-right-radius:10px ;
-    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
+
 .user-text {
     font-size: 10px;
 }
-#addbutton {
+
+.addbutton {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid blue;
-    width:fit-content;
+    width: fit-content;
     height: auto;
     text-decoration: none;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
 }
+
 .table-responsive table {
     width: 100%;
     border: 1px solid;
@@ -49,6 +60,13 @@
 .table-responsive th,
 .table-responsive td {
     flex: 1;
-    border-right: 1px solid ;
+    border-right: 1px solid;
     padding: 3px;
 }
+
+.sidebar {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {}

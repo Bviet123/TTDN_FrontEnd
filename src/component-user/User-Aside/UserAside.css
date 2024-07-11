@@ -1,0 +1,32 @@
+.user-sidebar-content {
+    display: flex;
+    flex-direction: column;
+}
+#userhome {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    margin: auto;
+}
+#userhome a{
+    text-decoration: none;
+    color: white;
+}
+.option-user {
+    display: flex;
+    flex-direction: column;
+}
+.option-user a {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;   
+    color: white;
+
+}
+.option-user a:hover{
+    background-color: blue;
+    border: 2px solid white;
+}

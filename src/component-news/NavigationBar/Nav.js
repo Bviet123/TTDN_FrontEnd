@@ -25,7 +25,7 @@ function Nav() {
             <span>username</span>
           </div>
           <div className='avatadrop' style={{ display: AvatarDrop ? 'flex' : 'none' }}>
-            <span>Tạo bài viết</span>
+            <span><a href='UserEditor'>Tạo bài viết</a></span>
             <span><a href='UserInfo'>Thông tin</a></span>
             <spa>.......</spa>
           </div>

@@ -45,12 +45,15 @@
     border-radius: 20px;
 }
 .avatar-container {
-    width: 150px;
+    width: 170px;
     display: flex;
+    
     flex-direction: column;
 }
 .avatar-inner{
-    display: flex;
+    width: 100%;
+    
+    margin-right: 30%;
 }
 
 .avatar-container .avatar-inner span {
@@ -58,12 +61,13 @@
     order: 2;
     color: blue;
     display: flex;
-    float: right;
+    float: left;
     height: 100%;
     align-content: center;
 }
 .UserHolder {
-    order: 1;
+    order: -1;
+    float: left;
     width: 40px;
     height: 40px;
     border-radius: 50px;

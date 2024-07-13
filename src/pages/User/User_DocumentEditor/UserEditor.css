@@ -1,9 +1,80 @@
-@import '../../../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../../../../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
+
+.Edit-wrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    background-color: #EEEEEE;
+
+}
+
+.editor-container {
+    padding-bottom: 25px;
+    width: 90%;
+}
+.main-user-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.Editor-aside {
+    border: 1px solid;
+    width: 20%;
+    background-color:#686D76;
+}
+#container {
+    min-height: 100vh;
+    width: 100%
+}
+.create-blog {
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px #686D76;
+}
+.input-layout {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
+} 
+.EvenName input {
+    display: flex;
+}
+.radio-container {
+    display: flex;
+    flex-direction: column;
+}
+.radio-div {
+    display: flex;
+    width: fit-content;
+}
+.radio-container input {
+    margin: 5px;
+    margin-left: 10px;
+}
+.editor {
+    max-width: 600px;
+    min-width: 100px;
+}
+.btn-post {
+    border: 1px solid;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.btn-post span {
+    font-size: 15px;
+}
+.btn-post:hover {
+    background-color: #373A40;
+    color: white;
+}

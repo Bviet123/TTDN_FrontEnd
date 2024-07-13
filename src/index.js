@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { registerLicense } from '@syncfusion/ej2-base';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,7 +19,6 @@ import UserInfo from './pages/User/User_Info/UserInfo';
 import InfoUpdate from './pages/User/User_Info_update/InfoUpdate';
 import UserEditor from './pages/User/User_DocumentEditor/UserEditor';
 
-registerLicense('Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCdkx3RXxbf1x0ZFxMYVlbRHJPIiBoS35RckVkWH5ccXVQRmVfV0dz');
 const router = createBrowserRouter([
   {
     path: "/",

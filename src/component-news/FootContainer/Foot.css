@@ -17,11 +17,12 @@
 .footer-contact {
     width: fit-content;
     font-size: 13px;
-    margin: 3px;
+    margin: 10px;
 }
 
 .footer-else {
     border-left: 1px solid;
+    margin: 10px;
 }
 
 .footer-size {

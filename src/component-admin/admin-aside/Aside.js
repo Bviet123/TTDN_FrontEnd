@@ -5,47 +5,17 @@ function Aside() {
 
 
     return (
-            <div class="sidebar-content">
-                <ul class="nav-secondary">
-                    <li>
-                        <a href="Admin">
-                            <p>Admin</p>
-                        </a>
-                    </li>
-                    <li class="nav-section">
-                        <h4 class="text-section">Option</h4>
-                    </li>
-                    <li class="nav-item" >
-                        <a href="#">
-                            <p>Tài khoản</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#sidebarLayouts">
-                            <p>Tin tức</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#forms">
-                            <p>Hội nghị</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#tables">
-                            <p>Hội thảo</p>
-
-                        </a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a href="#maps">
-                            <p>Hội thi</p>
-
-                        </a>
-
-                    </li>
-                </ul>
+        <div className="admin-sidebar-content" id="adminhome">
+            <a href='AdminInfo'>Admin Home</a>
+            <span>Option</span>
+            <div className='option-admin'>
+                <a>Tài Khoản</a>
+                <a>Tin Tức</a>
+                <a>Hội Ngị</a>
+                <a>Hội Thảo</a>
+                <a>Hội Thi</a>
             </div>
+        </div>
     );
 }
 

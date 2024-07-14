@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './UserEditor.css';
 import Nav from '../../../component-news/NavigationBar/Nav';
 import Foot from '../../../component-news/FootContainer/Foot';
@@ -7,31 +7,38 @@ import FroalaEditor from 'react-froala-wysiwyg';
 import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import 'froala-editor/js/plugins/image.min.js';
+import IconHint from '../../../image/nav-icon.png';
+
 function UserEditor() {
+    const [UserHint, setUserHint] = useState(false);
     return (
         <div className='Edit-wrapper'>
             <div>
                 <Nav />
             </div>
             <div className='main-user-container'>
-                <div className='Editor-aside'>
+                <div className='Editor-aside' style={{ display: UserHint ? 'none' : 'block' }}>
                     <UserAside />
                 </div>
                 <div className='editor-container'>
                     <div className='create-blog'>
+                        <img
+                            className="picHint"
+                            src={IconHint}
+                            alt="my hint picture"
+                            onClick={() => setUserHint(!UserHint)}
+                        />
                         <div className='EvenName'>
                             <p>Tên sự kiện:</p>
-                            <input type='text' className='input-layout' placeholder='Nhập tên sự kiện' required/>
+                            <input type='text' className='input-layout' placeholder='Nhập tên sự kiện' required />
                         </div>
                         <div className='EvenName'>
                             <p>Speaker:</p>
-                            <input type='text' className='input-layout' placeholder='speaker' required/>
+                            <input type='text' className='input-layout' placeholder='speaker' required />
                         </div>
                         <div className='radio-container'>
                             <p>Thể loại :</p>
                             <div className='radio-div'>
-                                <input type="radio" id="radio-news" name="size" value="News" />
-                                <label for="radio-news">Tin tức</label>
                                 <input type="radio" id="radio-seminar" name="size" value="Seminar" />
                                 <label for="radio-seminar">Hội nghị</label>
                                 <input type="radio" id="radio-conference" name="size" value="conference" />
@@ -46,7 +53,7 @@ function UserEditor() {
                         </div>
                         <div className='file-container'>
                             <p>Tệp tài liệu: </p>
-                            <input type='file'/>
+                            <input type='file' />
                         </div>
                         <div className='btn-post'>
                             <span>Đăng bài</span>

@@ -1,16 +1,36 @@
-
-.sidebar-content ul li {
+.admin-sidebar-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
+    width: 250px;
 }
-
-.sidebar-content ul li a {
-    color: black;
+#adminhome {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    margin: auto;
+}
+#adminhome a{
     text-decoration: none;
+    color: white;
 }
+#adminhome span {
+    color: #DDE6ED;
+}
+.option-admin {
+    display: flex;
+    flex-direction: column;
+}
+.option-admin a {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;   
+    color: white;
 
-.nav-item {
-    margin-left: 30px;
+}
+.option-admin a:hover{
+    background-color: blue;
+    border: 2px solid white;
 }

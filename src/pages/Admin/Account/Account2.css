@@ -1,13 +1,19 @@
 .wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .main-panel {
     flex: 1;
     padding: 20px;
+    
 }
-
+.admin-container {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    overflow: scroll;
+}
 .card-body {
     width: 100%;
 }
@@ -40,13 +46,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
+    border: 1px solid green;
     width: fit-content;
     height: auto;
     text-decoration: none;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
+    color: black;
     cursor: pointer;
+}
+.addbutton:hover {
+    background-color: rgb(37, 124, 37);
+    color: white;
 }
 
 .table-responsive table {
@@ -63,10 +74,32 @@
     border-right: 1px solid;
     padding: 3px;
 }
+.btn-edit {
+    padding: 10px;
+    width: 70px;
+    margin-left: 5px;    
+    border-radius: 5px;
+    cursor: pointer;
+}
+#btn-fix {
+    background-color: rgb(96, 96, 243);
+    color: white;
+}
+#btn-delete {
+    background-color: rgb(253, 82, 82);
+    color: white;
+}
 
-.sidebar {
+.admin-sidebar {
     display: block;
+    background-color: #27374D;
+    padding: 10px;
+    width: 250px;
+    height: 100%;
+    border: 1px solid;
 }
 
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+
+}

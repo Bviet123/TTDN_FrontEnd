@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import './Aside.css';
+import AsidePic from '../../image/avatar-holder.jpeg';
 
 function Aside() {
 
 
     return (
         <div className="admin-sidebar-content" id="adminhome">
-            <a href='AdminInfo'>Admin Home</a>
+            <div className='admin-aside-pic-container'>
+                <img src={AsidePic} alt='avatar-pic-aside' className='aside-avatar' />
+                <div>
+                    <span id="aside-name">Nguyễn Lê Thành Chung</span>
+                    <span id="aside-role">Quyền: Admin</span>
+                </div>
+            </div>
             <span>Option</span>
             <div className='option-admin'>
                 <a>Tài Khoản</a>

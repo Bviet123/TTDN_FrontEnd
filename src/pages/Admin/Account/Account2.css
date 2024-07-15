@@ -1,37 +1,84 @@
 .wrapper {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 .main-panel {
     flex: 1;
-    padding: 20px;
-    
+}
+.container-admin-table {
+    margin: 20px;
 }
 .admin-container {
     display: flex;
     flex-direction: row;
-    height: 80%;
+    height: 100%;
     overflow: scroll;
 }
 .card-body {
     width: 100%;
 }
+.body-nav-container {
+    display: flex;
+    background-color: #D6BD98;
+}
+
 
 .picHidden {
     width: 30px;
     height: 30px;
     margin: 0;
+    border: 1px solid;
+    background-color: white;
     padding: 0;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
 }
-
+.container-admin-form {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.AdminHolder {
+    display: flex;
+    align-self: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    order: 2;
+    cursor: pointer;
+}
+#admin-nav-name {
+    order: 3;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+.admin-form {
+    display: flex;
+    order: 1;
+    padding: 10px;
+    margin-right: 30px;
+}
+.admin-input {
+    border-radius: 5px;
+    margin-right: 3px;
+}
+.admin-submit {
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70px;
+    white-space: nowrap;
+}
 .page-inner {
     width: 100%;
 }
 
 .card-header {
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-end;
     padding: 10px;
     border: 1px solid;
     border-top-right-radius: 10px;
@@ -40,6 +87,9 @@
 
 .user-text {
     font-size: 10px;
+}
+.ColumnName {
+    width: 200px;
 }
 
 .addbutton {
@@ -93,13 +143,23 @@
 .admin-sidebar {
     display: block;
     background-color: #27374D;
-    padding: 10px;
     width: 250px;
     height: 100%;
-    border: 1px solid;
 }
 
 
 @media screen and (max-width: 768px) {
 
+}
+@media screen and (max-width: 320px) {
+    .AdminHolder {
+        display: none;
+    }
+    #admin-nav-name {
+        display: none;
+    }
+    .container-admin-form {
+        justify-content: flex-start;
+    }
+    
 }

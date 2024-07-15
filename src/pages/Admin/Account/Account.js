@@ -2,32 +2,41 @@ import React, { useState } from 'react';
 import './Account2.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
 import IconHidden from '../../../image/nav-icon.png';
-import Nav from '../../../component-news/NavigationBar/Nav';
-import Foot from '../../../component-news/FootContainer/Foot';
+import AdminAvatar from '../../../image/avatar-holder.jpeg';
 
 function Account() {
     const [AdminHint, setAdminHint] = useState(false);
-
+    const [AdminDrop, setAdminDrop] = useState(false);
     return (
         <div class="wrapper">
-            <div>
-                <Nav/>
-            </div>
+
             <div className='admin-container'>
                 <div class="admin-sidebar" style={{ display: AdminHint ? 'none' : 'block' }}>
                     <Aside />
                 </div>
                 <div class="main-panel">
-                    <div class="container">
+                    <div className='body-nav-container'>
+                        <div>
+                            <img
+                                className="picHidden"
+                                src={IconHidden}
+                                alt="my pic"
+                                onClick={() => setAdminHint(!AdminHint)}
+                            />
+                        </div>
+                        <div className='container-admin-form'>
+                            <img src={AdminAvatar} alt="User holder imgage" onClick={() => setAdminDrop(!AdminDrop)} className='AdminHolder' />
+                            <span id="admin-nav-name">username</span>
+                            <div className='admin-form'>
+                                <input type='text' placeholder='TÌm kiếm .....' className='admin-input'/>
+                                <button className='admin-submit'>Tìm kiếm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-admin-table">
                         <div class="page-inner">
                             <div class="card">
                                 <div class="card-header">
-                                    <img
-                                        className="picHidden"
-                                        src={IconHidden}
-                                        alt="my pic"
-                                        onClick={() => setAdminHint(!AdminHint)}
-                                    />
                                     <a className='addbutton' href='AddAccount'>Thêm tài khoản</a>
                                 </div>
                                 <div class="card-body">
@@ -35,19 +44,19 @@ function Account() {
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th className='hintTable'>STT</th>
-                                                    <th className='hintTable'>Họ và tên</th>
-                                                    <th className='hintTable'>Email</th>
-                                                    <th className='hintTable'>Số điện thoại</th>
-                                                    <th className='hintTable'>Edit</th>
+                                                    <th>STT</th>
+                                                    <th>Họ và tên</th>
+                                                    <th>Email</th>
+                                                    <th>Số điện thoại</th>
+                                                    <th>Edit</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td className='hintTable'>1</td>
-                                                    <td className='hintTable'>Nguyễn Văn A</td>
-                                                    <td className='hintTable'>nguyenvana@gmail.com</td>
-                                                    <td className='hintTable'>0123456789</td>
+                                                    <td>1</td>
+                                                    <td>Nguyễn Văn A</td>
+                                                    <td>nguyenvana@gmail.com</td>
+                                                    <td>0123456789</td>
                                                     <th>
                                                         <button className='btn-edit' id="btn-fix">sửa</button>
                                                         <button className='btn-edit' id="btn-delete">Xóa</button>
@@ -81,9 +90,6 @@ function Account() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <Foot/>
             </div>
         </div>
     );

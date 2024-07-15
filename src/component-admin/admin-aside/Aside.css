@@ -3,18 +3,28 @@
     flex-direction: column;
     width: 250px;
 }
-#adminhome {
-    padding: 5px;
-    cursor: pointer;
-    font-size: 25px;
-    margin: auto;
+.admin-aside-pic-container {
+    width: 100%;
+    border-bottom: 2px solid;
+    background-color: #0f1927;
 }
-#adminhome a{
-    text-decoration: none;
+.admin-aside-pic-container div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.admin-aside-pic-container div span {
+    font-size: 15px;
+    font-weight: 500;
     color: white;
+    opacity: 0.7;
+    font-style: italic;
 }
-#adminhome span {
-    color: #DDE6ED;
+.aside-avatar {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
 }
 .option-admin {
     display: flex;
@@ -32,5 +42,5 @@
 }
 .option-admin a:hover{
     background-color: blue;
-    border: 2px solid white;
+    border: 1px solid white;
 }

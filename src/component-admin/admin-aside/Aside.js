@@ -6,7 +6,7 @@ function Aside() {
 
 
     return (
-        <div className="admin-sidebar-content" id="adminhome">
+        <div className="admin-sidebar-content">
             <div className='admin-aside-pic-container'>
                 <img src={AsidePic} alt='avatar-pic-aside' className='aside-avatar' />
                 <div>

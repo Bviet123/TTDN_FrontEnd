@@ -9,7 +9,6 @@ function Account() {
     const [AdminDrop, setAdminDrop] = useState(false);
     return (
         <div class="wrapper">
-
             <div className='admin-container'>
                 <div class="admin-sidebar" style={{ display: AdminHint ? 'none' : 'block' }}>
                     <Aside />
@@ -26,9 +25,9 @@ function Account() {
                         </div>
                         <div className='container-admin-form'>
                             <img src={AdminAvatar} alt="User holder imgage" onClick={() => setAdminDrop(!AdminDrop)} className='AdminHolder' />
-                            <span id="admin-nav-name">username</span>
+                            <span className="admin-nav-name">username</span>
                             <div className='admin-form'>
-                                <input type='text' placeholder='TÌm kiếm .....' className='admin-input'/>
+                                <input type='text' placeholder='TÌm kiếm .....' className='admin-input' />
                                 <button className='admin-submit'>Tìm kiếm</button>
                             </div>
                         </div>

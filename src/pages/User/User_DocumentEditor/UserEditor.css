@@ -7,7 +7,7 @@
     justify-content: space-between;
     height: fit-content;
     background-color: #EEEEEE;
-
+    overflow: hidden;
 }
 
 .editor-container {
@@ -67,8 +67,7 @@
     margin-left: 10px;
 }
 .editor {
-    max-width: 600px;
-    min-width: 100px;
+   width: 550px;
 }
 .btn-post {
     border: 1px solid;

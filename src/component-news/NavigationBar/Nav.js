@@ -27,7 +27,7 @@ function Nav() {
           <div className='avatadrop' style={{ display: AvatarDrop ? 'flex' : 'none' }}>
             <span><a href='UserEditor'>Tạo bài viết</a></span>
             <span><a href='UserInfo'>Thông tin</a></span>
-            <span>.......</span>
+            <span>Đăng xuất</span>
           </div>
         </div>
       </nav>

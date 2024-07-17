@@ -1,0 +1,79 @@
+.Event-App {
+    background-color: #D3D3D3;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.Event-main {
+    display: flex;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.Event {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+    width: 60%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    margin-top: 10px;
+}
+.EventDetail-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.Event-right {
+    float: right;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+
+}
+
+.Event-left {
+    float: left;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+.Event-title {
+    justify-content: center;
+    margin-top: 60px;
+    font-size: x-large;
+    font-weight: 650;
+
+}
+
+.Event-footer {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    float: right;
+
+}
+
+
+.Event_pic_item_center {
+    width: 100px;
+}
+
+.Event_text_div_center {
+    width: 100px;
+}
+
+.Event_Text {
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .Event_Text {
+        font-size: 15px;
+    }
+    
+}

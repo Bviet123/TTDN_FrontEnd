@@ -20,6 +20,8 @@ import InfoUpdate from './pages/User/User_Info_update/InfoUpdate';
 import UserEditor from './pages/User/User_DocumentEditor/UserEditor';
 import AdminEditor from './pages/Admin/Admin-Editor/AdminEditor';
 import AdminNews from './pages/Admin/Admin-News/AdminNews';
+import EventDetail from './pages/EventDetails/EventDetails';
+import EditAccount from './pages/Admin/Account/UpdateAccount/UpdateAccount';
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
   {
     path: "AdminNews",
     element: <AdminNews/>
+  },
+  {
+    path: "EventDetails",
+    element: <EventDetail/>
+  },
+  {
+    path: "EditAccount",
+    element: <EditAccount/>
   },
 ]);
 

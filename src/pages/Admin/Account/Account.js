@@ -9,6 +9,7 @@ function Account() {
     const [EditAccount, setEditAccount] = useState(false);
     const [ShowAccount, setShowAccount] = useState(false);
 
+    
     return (
         <div class="wrapper">
             <div className='admin-container'>
@@ -54,7 +55,7 @@ function Account() {
                                                         <th>
                                                             <button className='btn-edit' id="btn-fix" onClick={() => setEditAccount(!EditAccount)}>sửa</button>
                                                             <button className='btn-edit' id="btn-delete">Xóa</button>
-                                                            <button className='btn-edit' id="btn-info">Thông tin</button>
+                                                            <button className='btn-edit' id="btn-info" onClick={() => setShowAccount(!ShowAccount)}>Thông tin</button>
                                                         </th>
                                                     </tr>
                                                     <tr>
@@ -65,7 +66,7 @@ function Account() {
                                                         <th>
                                                             <button className='btn-edit' id="btn-fix" onClick={() => setEditAccount(!EditAccount)}>sửa</button>
                                                             <button className='btn-edit' id="btn-delete" >Xóa</button>
-                                                            <button className='btn-edit' id="btn-info">Thông tin</button>
+                                                            <button className='btn-edit' id="btn-info" onClick={() => setShowAccount(!ShowAccount)}>Thông tin</button>
 
                                                         </th>
                                                     </tr>

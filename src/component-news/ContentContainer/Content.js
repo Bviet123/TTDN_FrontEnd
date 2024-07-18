@@ -47,10 +47,6 @@ function Content() {
                     <a>4</a>
                     <a>5</a>
                     <a>6</a>
-                    <a>7</a>
-                    <a>8</a>
-                    <a>9</a>
-                    <a>10</a>
                 </div>
                 <button className='PagesButton'>Next</button>
             </div>

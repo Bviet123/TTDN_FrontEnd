@@ -1,4 +1,3 @@
-
 .Edit-wrapper {
     padding: 0;
     margin: 0;
@@ -7,88 +6,170 @@
     justify-content: space-between;
     height: fit-content;
     background-color: #EEEEEE;
-    overflow: hidden;
+    
+}
+
+.shower-container {
+    display: flex;
+    justify-content: space-between;
+}
+.shower-container span {
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+.shower-container span:hover {
+    background-color: rgb(252, 185, 97);
 }
 
 .editor-container {
-    padding-bottom: 25px;
-    width: 90%;
+    flex: 1;
+    display: flex;
 }
+
 .main-user-container {
     display: flex;
     flex: 1;
     flex-direction: row;
 }
+
 .hint-container {
     border: 1px solid;
     width: 100%;
 }
-.picHint {
 
-    width: 30px;
-    height: 30px;
+.picHint {
+    display: flex;
+    width: 40px;
     
 }
+
 .Editor-aside {
     border: 1px solid;
-    width: 300px;
-    background-color:#686D76;
+    width: 250px;
+    background-color: #686D76;
 }
+
 #container {
     min-height: 100vh;
     width: 100%
 }
+
 .create-blog {
     width: fit-content;
-    margin: auto;
+    flex: 1;
     padding: 10px;
     border: 1px solid;
-    box-shadow: 2px 2px 2px 2px #686D76;
+
 }
+
 .input-layout {
     border: 1px solid;
     border-radius: 5px;
     height: 30px;
     padding-left: 5px;
-} 
+    width: 50%;
+}
+
 .EvenName input {
     display: flex;
 }
+
 .radio-container {
     display: flex;
     flex-direction: column;
 }
+
 .radio-div {
     display: flex;
     width: fit-content;
 }
+
 .radio-container input {
     margin: 5px;
     margin-left: 10px;
 }
+
 .editor {
-   width: 550px;
+    flex: 1;
 }
+
 .btn-post {
-    border: 1px solid;
-    cursor: pointer;
-    display: flex;
-    margin: auto;
+    padding: 10px;
     width: fit-content;
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 10px;
+    margin: auto;
+
 }
+
+.btn-post button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
 .btn-post span {
     font-size: 15px;
 }
-.btn-post:hover {
-    background-color: #373A40;
-    color: white;
+
+
+.file-select {
+    width: 300px;
+    border: 1px solid;
+    padding: 5px;
+    height: fit-content;
+    margin-left: 3px;
+
+}
+
+.file-select input {
+    overflow-x: scroll;
+}
+
+.file-selector {
+    cursor: pointer; 
+    padding: 10px;
+    background-color: blanchedalmond; 
+    border-radius: 5px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.file-item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-Radius: 5px;
+    border: 1px solid;
+    justify-content: space-around;
+}
+
+.file-Name {
+    margin-left: 10px; 
+    width: 70%;
+    overflow-x: scroll; 
+    scrollbar-width : none;
+}
+
+.delete-icon {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
 }
 @media screen and (max-width: 768px) {
     .editor-container {
         flex: 1;
         margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .editor {
+        width: 320px;
     }
 }

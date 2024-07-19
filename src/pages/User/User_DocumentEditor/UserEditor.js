@@ -46,11 +46,11 @@ function UserEditor() {
         switch (extension) {
             case 'doc':
             case 'docx':
-                return <FaFileWord color="#2b579a" size={50} />;
+                return <FaFileWord color="#2b579a" size={30} />;
             case 'pdf':
-                return <FaFilePdf color="#f40f02" size={50} />;
+                return <FaFilePdf color="#f40f02" size={30} />;
             default:
-                return <FaFileAlt color="#8c8c8c" size={50} />;
+                return <FaFileAlt color="#8c8c8c" size={30} />;
         }
     };
     //hàm xóa item file

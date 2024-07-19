@@ -1,0 +1,224 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+.Admin-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100%;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+.Admin-sidebar {
+    background-color: #3f5064;
+}
+
+.Admin-page-inner {
+    display: flex;
+    flex-direction: row;
+}
+
+.Admin-shower-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Admin-shower-container span {
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.Admin-shower-container span:hover {
+    background-color: rgb(252, 185, 97);
+}
+
+.Admin-editor-container {
+    flex: 1;
+    display: flex;
+}
+
+.Admin-main-panel {
+    height: 100%;
+}
+
+.Admin-main-user-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.Admin-body-nav-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(155, 128, 74);
+}
+
+.Admin-hint-container {
+    border: 1px solid;
+    width: 100%;
+}
+
+.Admin-picHidden {
+    display: flex;
+    width: 40px;
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.Admin-Editor-aside {
+    border: 1px solid;
+    width: 250px;
+    background-color: #686D76;
+}
+
+.Admin-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.Admin-create-blog {
+    width: fit-content;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid;
+
+}
+
+.Admin-form {
+    display: flex;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.Admin-input {
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+
+.Admin-admin-submit {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.Admin-input-layout {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
+    width: 50%;
+}
+
+.Admin-EvenName input {
+    display: flex;
+}
+
+.Admin-radio-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Admin-radio-div {
+    display: flex;
+    width: fit-content;
+}
+
+.Admin-radio-container input {
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.Admin-editor {
+    flex: 1;
+}
+
+.Admin-btn-post {
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+
+}
+
+.Admin-btn-post button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+.Admin-btn-post span {
+    font-size: 15px;
+}
+
+
+.Admin-file-select {
+    width: 300px;
+    border: 1px solid;
+    padding: 5px;
+    height: fit-content;
+    margin-left: 3px;
+
+}
+
+.Admin-file-select input {
+    overflow-x: scroll;
+}
+
+.Admin-file-selector {
+    cursor: pointer;
+    padding: 10px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.Admin-file-item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-Radius: 5px;
+    border: 1px solid;
+    justify-content: space-around;
+}
+
+.Admin-file-Name {
+    margin-left: 10px;
+    width: 70%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.Admin-delete-icon {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .Admin-editor-container {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Admin-editor {
+        width: 320px;
+    }
+}

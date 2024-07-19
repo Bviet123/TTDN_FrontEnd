@@ -1,0 +1,27 @@
+.froala-editor-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .froala-editor-container .fr-box {
+    width: 100% !important;
+  }
+  
+  .froala-editor-container .fr-wrapper {
+    width: 100% !important;
+    overflow-x: auto;
+  }
+  
+  .froala-editor-container .fr-element {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+  
+  /* Đảm bảo các phần tử con không tràn ra ngoài */
+  .froala-editor-container .fr-element img,
+  .froala-editor-container .fr-element table {
+    max-width: 100%;
+    height: auto;
+  }

@@ -38,20 +38,9 @@ html, body, #root {
     background-color: rgb(252, 185, 97);
 }
 
-.Admin-editor-container {
-    flex: 1;
-    display: flex;
-}
-
 .Admin-main-panel {
     height: 100%;
     flex: 1;
-}
-
-.Admin-main-user-container {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
 }
 
 .Admin-body-nav-container {
@@ -60,23 +49,12 @@ html, body, #root {
     background-color: rgb(155, 128, 74);
 }
 
-.Admin-hint-container {
-    border: 1px solid;
-    width: 100%;
-}
-
 .Admin-picHidden {
     display: flex;
     width: 40px;
     border: 1px solid;
     margin: 5px;
     border-radius: 5px;
-}
-
-.Admin-Editor-aside {
-    border: 1px solid;
-    width: 250px;
-    background-color: #686D76;
 }
 
 .Admin-container {
@@ -174,34 +152,6 @@ html, body, #root {
 
 .Admin-file-select input {
     overflow-x: scroll;
-}
-
-.Admin-file-selector {
-    cursor: pointer;
-    padding: 10px;
-    background-color: blanchedalmond;
-    border-radius: 5px;
-    border: 1px solid;
-    display: flex;
-    justify-content: center;
-}
-
-.Admin-file-item {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-Radius: 5px;
-    border: 1px solid;
-    justify-content: space-around;
-}
-
-.Admin-file-Name {
-    margin-left: 10px;
-    width: 70%;
-    overflow-x: scroll;
-    scrollbar-width: none;
 }
 
 .Admin-delete-icon {

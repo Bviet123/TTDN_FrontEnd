@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AdminEditor.css';
+import './FroalaEditor.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
 import IconHidden from '../../../image/nav-icon.png';
 import 'froala-editor/js/froala_editor.pkgd.min.js';
@@ -19,7 +20,6 @@ function AdminEditor() {
     const [AdminFileHInt, setAdminFileHInt] = useState(false);
     const [AdminFiles, setAdminFiles] = useState([]);
     const [AdminError, setAdminError] = useState('');
-
 
     const handleAdminFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
@@ -110,7 +110,10 @@ function AdminEditor() {
                             </div>
                             <div className='Admin-editor'>
                                 <p>Nội dung:</p>
-                                <FroalaEditor/>
+                                <div className="froala-editor-container">
+                                    <FroalaEditor />
+                                </div>
+
                             </div>
                             <div className='Admin-btn-post'>
                                 <button

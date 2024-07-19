@@ -22,6 +22,7 @@ import AdminEditor from './pages/Admin/Admin-Editor/AdminEditor';
 import AdminNews from './pages/Admin/Admin-News/AdminNews';
 import EventDetail from './pages/EventDetails/EventDetails';
 import EditAccount from './pages/Admin/Account/UpdateAccount/UpdateAccount';
+import AdminNewsEditor from './pages/Admin/Admin-News/AdminNews';
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
   {
     path: "EditAccount",
     element: <EditAccount/>
+  },
+  {
+    path: "AdminNewsEditor",
+    element: <AdminNewsEditor/>
   },
 ]);
 

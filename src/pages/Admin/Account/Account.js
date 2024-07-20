@@ -8,7 +8,7 @@ function Account() {
     const [AdminHint, setAdminHint] = useState(false);
     const [EditAccount, setEditAccount] = useState(false);
     const [ShowAccount, setShowAccount] = useState(false);
-
+    const [AddAccount, setAddAccount] = useState(false);
     
     return (
         <div class="wrapper">
@@ -32,7 +32,7 @@ function Account() {
                             <div class="page-inner">
                                 <div class="card">
                                     <div class="card-header">
-                                        <a className='addbutton' href='AddAccount'>Thêm tài khoản</a>
+                                        <a className='addbutton' onClick={() => setAddAccount(!AddAccount)}>Thêm tài khoản</a>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
@@ -109,6 +109,28 @@ function Account() {
                                     </div>
                                 </form>
                             </div>
+                            
+                            <div className="Account-Edit-container" style={{ display: AddAccount ? 'block' : 'none' }}>
+
+                                <form>
+                                    <div>
+                                        <label for="username">Tên đăng nhập:</label>
+                                        <input className='Account-input' type="text" id="username" name="username" required />
+                                    </div>
+                                    <div >
+                                        <label for="password">Mật khẩu:</label>
+                                        <input className='Account-input' type="password" name="password" required />
+                                    </div>
+                                    <div >
+                                        <label for="email">Nhập lại mật khẩu:</label>
+                                        <input className='Account-input' type="password" name="re-password" required />
+                                    </div>
+                                    <div>
+                                        <button className='Edit-submit' type="submit">Tạo tài khoản</button>
+                                    </div>
+                                </form>
+                            </div>
+
                             <div style={{ display: ShowAccount ? 'block' : 'none' }}>
                                 <form className='Account-user-info'>
                                     <div>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './AdminEditor.css';
-import './FroalaEditor.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
 import IconHidden from '../../../image/nav-icon.png';
 import 'froala-editor/js/froala_editor.pkgd.min.js';

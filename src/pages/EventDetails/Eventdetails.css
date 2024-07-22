@@ -21,6 +21,7 @@
     background-color: white;
     margin-top: 10px;
 }
+
 .EventDetail-container {
     display: flex;
     flex-direction: row;
@@ -28,11 +29,19 @@
 }
 
 .Event-right {
-    float: right;
+    display: flex;
     font-size: 15px;
     font-style: italic;
     opacity: 0.5;
+    width: 100%;
+    justify-content: space-between;
 
+}
+
+.Speaker-name {
+    display: flex;
+    font-size: 15px;
+    float: left;
 }
 
 .Event-left {
@@ -71,9 +80,27 @@
     text-align: justify;
 }
 
+.Event-file-container {
+    display: flex;
+}
+
+.Event-file-container div {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.Event-file-container div div {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+}
+
+
 @media screen and (max-width: 768px) {
     .Event_Text {
         font-size: 15px;
     }
-    
+
 }

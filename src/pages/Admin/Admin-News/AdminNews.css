@@ -1,27 +1,61 @@
-.froala-editor-container {
-    width: 100%;
+.news-item-container {
+    display: flex;
     max-width: 100%;
+    border-radius: 5px; 
+    margin: 10px;
+    padding: 5px;
+}
+
+.Admin-news-item {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.news-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.news-info-container {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.info-title-news span {
+    font-size: 15px;
+    max-width: 100%;
+    min-width: 150px;
+    white-space: nowrap;
     overflow: hidden;
-  }
-  
-  .froala-editor-container .fr-box {
-    width: 100% !important;
-  }
-  
-  .froala-editor-container .fr-wrapper {
-    width: 100% !important;
-    overflow-x: auto;
-  }
-  
-  .froala-editor-container .fr-element {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
-  
-  /* Đảm bảo các phần tử con không tràn ra ngoài */
-  .froala-editor-container .fr-element img,
-  .froala-editor-container .fr-element table {
-    max-width: 100%;
-    height: auto;
-  }
+    text-overflow: ellipsis;
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+}
+.news-info-container div {
+    display: flex;
+    justify-content: space-between;
+
+}
+.info-news span {
+    font-size: 13px;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.news-button {
+    margin: auto;
+}
+.news-button span {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: auto;
+}

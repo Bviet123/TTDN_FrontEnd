@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  font-family: 'arial' 'Roboto', 'Oxygen',;
+  font-family: 'Oxygen',;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: 'Courier New',
+  font-family: 'Arial', 'Courier New',
     monospace;
 }

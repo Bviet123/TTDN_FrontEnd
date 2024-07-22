@@ -19,79 +19,85 @@ import UserInfo from './pages/User/User_Info/UserInfo';
 import InfoUpdate from './pages/User/User_Info_update/InfoUpdate';
 import UserEditor from './pages/User/User_DocumentEditor/UserEditor';
 import AdminEditor from './pages/Admin/Admin-Editor/AdminEditor';
-import AdminNews from './pages/Admin/Admin-News/AdminNews';
 import EventDetail from './pages/EventDetails/EventDetails';
 import EditAccount from './pages/Admin/Account/UpdateAccount/UpdateAccount';
-import AdminNewsEditor from './pages/Admin/Admin-News/AdminNews';
+import AdminAddNewsEditor from './pages/Admin/Admin-News/AddNews/AdminAddNews';
+import AdminNews from './pages/Admin/Admin-News/AdminNews';
+import TableNews from './pages/Admin/Admin-News/table';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
   {
     path: "Login",
-    element: <Login/>,
+    element: <Login />,
   },
   {
     path: "NewsDetails",
-    element: <NewsDetail/>,
+    element: <NewsDetail />,
   },
   {
     path: "Competition",
-    element: <Competition/>,
+    element: <Competition />,
   },
   {
     path: "Conference",
-    element: <Conference/>,
+    element: <Conference />,
   },
   {
     path: "Seminar",
-    element: <Seminar/>,
+    element: <Seminar />,
   },
   {
     path: "Admin",
-    element: <Account/>,
+    element: <Account />,
   },
   {
     path: "AddAccount",
-    element: <AddAccount/>
+    element: <AddAccount />
   },
   {
     path: "LoginAdmin",
-    element: <LoginAdmin/>
+    element: <LoginAdmin />
   },
   {
     path: "UserInfo",
-    element: <UserInfo/>
+    element: <UserInfo />
   },
   {
     path: "UserInfoUpdate",
-    element: <InfoUpdate/>
+    element: <InfoUpdate />
   },
   {
     path: "UserEditor",
-    element: <UserEditor/>
+    element: <UserEditor />
   },
   {
     path: "AdminEditor",
-    element: <AdminEditor/>
+    element: <AdminEditor />
   },
-  {
-    path: "AdminNews",
-    element: <AdminNews/>
-  },
+
   {
     path: "EventDetails",
-    element: <EventDetail/>
+    element: <EventDetail />
   },
   {
     path: "EditAccount",
-    element: <EditAccount/>
+    element: <EditAccount />
   },
   {
     path: "AdminNewsEditor",
-    element: <AdminNewsEditor/>
+    element: <AdminAddNewsEditor />
+  },
+  {
+    path: "AdminNews",
+    element: <AdminNews />
+  },
+  {
+    path: "TableNews",
+    element: <TableNews />
   },
 ]);
 

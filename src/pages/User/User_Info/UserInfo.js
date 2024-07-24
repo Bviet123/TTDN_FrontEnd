@@ -1,49 +1,84 @@
 import React, { useState } from 'react';
 import './UserInfo.css';
+import Nav from '../../../component-news/NavigationBar/Nav';
+import Foot from '../../../component-news/FootContainer/Foot';
 import UserAside from '../../../component-user/User-Aside/UserAside';
-import userImage from '../../../image/avatar-holder.jpeg';
-import ImgHidden from '../../../image/nav-icon.png';
+import UserIcon from '../../../image/nav-icon.png';
+import AvatarUser from '../../../image/PlayHolder.png'
+
 
 
 function UserInfo() {
-    const [UserHin, setUserHin] = useState(false);
+    const [UserHint, setUserHint] = useState(false);
+    const [UserFix, setUserFix] = useState(false);
+
     return (
-        <div class="user-wrapper">
-            <div class="user-sidebar">
-                <UserAside />
+        <div className='Edit-wrapper'>
+            <div>
+                <Nav />
             </div>
-            <div className='user-outside'>
-            <img src={ImgHidden} alt='hidden image' className='hiddenimg' onClick={() => setUserHin(!UserHin)}/>
-            <div className='user-aside-drop' style={{ display: UserHin ? 'block' : 'none' }}>
-                <UserAside/>
-            </div>
-                <div className="user-main-panel">
-                    <div className='user-container'>
-                        <div className='user-image-container'>
-                            <img src={userImage} alt='user holder image' className='user-image-holder' />
-                        </div>
-                        <div className='user-info'>
+            <div className='main-user-container'>
+                <div className='Editor-aside' style={{ display: UserHint ? 'none' : 'block' }}>
+                    <UserAside />
+                </div>
+                <div className='editor-container'>
+                    <div className='create-blog'>
+                        <div className='shower-container'>
+                            <img
+                                className="picHint"
+                                src={UserIcon}
+                                alt="my hint picture"
+                                onClick={() => setUserHint(!UserHint)}
+                            />
                             <div>
-                                <span>Họ và tên: </span>
-                                <span>Ngày Sinh: </span>
-                                <span>Email: </span>
-                                <span>Địa chỉ: </span>
-                                <span>Số điện thoại: </span>
-                            </div>
-                            <div>
-                                <span>Lê Văn chung </span>
-                                <span>15/02/2008 </span>
-                                <span>levanchung@gmail.com </span>
-                                <span>Bình Dương </span>
-                                <span>098547221568 </span>
+                                <span>Thay Avatar</span>
+                                <span onClick={() => setUserFix(!UserFix)}>Sửa thông tin</span>
                             </div>
                         </div>
-                        <span className='user-edit-button'><a href='UserInfoUpdate'>Chỉnh sửa</a></span>
+                        <div className='User-container'>
+                            <div className='User-Image'>
+                                <img src={AvatarUser} alt='usser avata' />
+                            </div>
+                            <div className='User-contact-container'>
+                                <div className='User-Information'>
+                                    <div>
+                                        <span>Họ và tên: </span>
+                                        <span>Ngày sinh: </span>
+                                        <span>Email: </span>
+                                        <span>Số điện thoại: </span>
+                                        <span>Địa chỉ: </span>
+                                    </div>
+                                    <div>
+                                        <span>Lê Văn Chung</span>
+                                        <span>20/10/2004</span>
+                                        <span>LeVanChung@gmail.com</span>
+                                        <span>02987542257</span>
+                                        <span>Bình Dương</span>
+                                    </div>
+                                </div>
+                                <div className='User-fix-info' style={{ display: UserFix ? 'flex' : 'none' }}>
+                                    <span>Họ và tên: </span>
+                                    <input type='text'/>
+                                    <span>Ngày sinh: </span>
+                                    <input type='date'/>
+                                    <span>Email: </span>
+                                    <input type='email'/>
+                                    <span>Số điện thoại: </span>
+                                    <input type='text'/>
+                                    <span>Địa chỉ: </span>
+                                    <input type='text' className='input-user-address'/>
+                                    <span className='User-fix-submit'>Xác nhận</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div className='userfoot'>
+                <Foot />
+            </div>
         </div>
+
     );
 }
-
 export default UserInfo;

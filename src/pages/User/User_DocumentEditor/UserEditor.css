@@ -13,12 +13,16 @@
     display: flex;
     justify-content: space-between;
 }
-.shower-container span {
+.shower-container div {
+    margin-top: 10px;
+}
+.shower-container div span {
     font-size: 18px;
     border: 1px solid;
     border-radius: 5px;
     cursor: pointer;
     background-color: white;
+    margin-left: 5px;
 }
 .shower-container span:hover {
     background-color: rgb(252, 185, 97);

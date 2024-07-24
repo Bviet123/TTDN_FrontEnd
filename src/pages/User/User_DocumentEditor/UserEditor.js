@@ -22,7 +22,7 @@ function UserEditor() {
     const [files, setFiles] = useState([]);
     const [error, setError] = useState('');
 
-    
+
     const handleFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
         const allowedExtensions = ['doc', 'docx', 'pdf'];
@@ -80,7 +80,9 @@ function UserEditor() {
                                 alt="my hint picture"
                                 onClick={() => setUserHint(!UserHint)}
                             />
-                            <span onClick={() => setFileHint(!FileHint)} >Tệp tài liệu  </span>
+                            <div>
+                                <span onClick={() => setFileHint(!FileHint)} >Tệp tài liệu  </span>
+                            </div>
                         </div>
                         <div className='EvenName'>
                             <p>Tên sự kiện:</p>

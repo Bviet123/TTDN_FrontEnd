@@ -11,6 +11,8 @@ function UserAside() {
                 <div className='option-user'>
                     <a href='UserInfo'>Thông tin</a>
                     <a>Bài đăng</a>
+                    <a>Đã đăng kí</a>
+                    <a>Tin tức</a>
                 </div>
             </div>
     );

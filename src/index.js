@@ -16,14 +16,14 @@ import Account from './pages/Admin/Account/Account';
 import AddAccount from './pages/Admin/Account/AddAccount/AddAccount';
 import LoginAdmin from './pages/Admin/Admin-Login/AdminLogin';
 import UserInfo from './pages/User/User_Info/UserInfo';
-import InfoUpdate from './pages/User/User_Info_update/InfoUpdate';
 import UserEditor from './pages/User/User_DocumentEditor/UserEditor';
 import AdminEditor from './pages/Admin/Admin-Editor/AdminEditor';
 import EventDetail from './pages/EventDetails/EventDetails';
 import EditAccount from './pages/Admin/Account/UpdateAccount/UpdateAccount';
 import AdminAddNewsEditor from './pages/Admin/Admin-News/AddNews/AdminAddNews';
 import AdminNews from './pages/Admin/Admin-News/AdminNews';
-import TableNews from './pages/Admin/Admin-News/table';
+import UserColection from './pages/User/User_EditorColection/EditorColection';
+import NewsColection from './pages/User/User_NewsColection/NewsColection';
 
 const router = createBrowserRouter([
   {
@@ -66,10 +66,7 @@ const router = createBrowserRouter([
     path: "UserInfo",
     element: <UserInfo />
   },
-  {
-    path: "UserInfoUpdate",
-    element: <InfoUpdate />
-  },
+
   {
     path: "UserEditor",
     element: <UserEditor />
@@ -96,8 +93,12 @@ const router = createBrowserRouter([
     element: <AdminNews />
   },
   {
-    path: "TableNews",
-    element: <TableNews />
+    path: "UserColection",
+    element: <UserColection />
+  },
+  {
+    path: "NewsColection",
+    element: <NewsColection />
   },
 ]);
 

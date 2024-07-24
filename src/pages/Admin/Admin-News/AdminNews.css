@@ -1,7 +1,7 @@
 .news-item-container {
     display: flex;
     max-width: 100%;
-    border-radius: 5px; 
+    border-radius: 5px;
     margin: 10px;
     padding: 5px;
 }
@@ -20,12 +20,14 @@
     height: 80px;
     border-radius: 5px;
 }
+
 .news-info-container {
     display: flex;
     flex-direction: column;
-    
-    
+
+
 }
+
 .info-title-news span {
     font-size: 15px;
     max-width: 100%;
@@ -37,11 +39,13 @@
     cursor: pointer;
     font-weight: bold;
 }
+
 .news-info-container div {
     display: flex;
     justify-content: space-between;
 
 }
+
 .info-news span {
     font-size: 13px;
     opacity: 0.6;
@@ -51,6 +55,7 @@
 .news-button {
     margin: auto;
 }
+
 .news-button span {
     display: flex;
     justify-content: center;
@@ -58,4 +63,13 @@
     border: 1px solid;
     border-radius: 5px;
     margin: auto;
+}
+
+th,
+td {
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid;
+
 }

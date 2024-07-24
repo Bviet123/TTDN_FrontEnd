@@ -1,0 +1,30 @@
+.select-block-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border-top:1px solid;
+    margin-bottom: 10px;
+}
+.select-block-container div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    width: 150px;
+    cursor: pointer;
+}
+.seminar-block {
+    background-color: coral;
+}
+.conference-block {
+    background-color: burlywood;
+}
+.competion-block {
+    background-color: chocolate;
+}
+.sum-block {
+    background-color: antiquewhite;
+}

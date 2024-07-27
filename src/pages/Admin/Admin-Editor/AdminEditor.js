@@ -11,7 +11,8 @@ import {
     FaFileWord,
     FaFilePdf,
     FaFileAlt,
-    FaTimesCircle
+    FaTimesCircle,
+    FaPlusCircle
 } from 'react-icons/fa';
 
 function AdminEditor() {
@@ -19,6 +20,13 @@ function AdminEditor() {
     const [AdminFileHInt, setAdminFileHInt] = useState(false);
     const [AdminFiles, setAdminFiles] = useState([]);
     const [AdminError, setAdminError] = useState('');
+    const [speakers, setSpeakers] = useState([
+        { id: 1, name: 'Diễn giả 1' },
+        { id: 2, name: 'Diễn giả 2' },
+        { id: 3, name: 'Diễn giả 3' },
+        // Thêm các diễn giả khác nếu cần
+    ]);
+    const [selectedSpeaker, setSelectedSpeaker] = useState('');
 
     const handleAdminFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
@@ -93,8 +101,23 @@ function AdminEditor() {
                                 <input type='text' className='Admin-input-layout' placeholder='Nhập tên sự kiện' required />
                             </div>
                             <div className='EvenName'>
-                                <p>Diễn giả:</p>
-                                <input type='text' className='Admin-input-layout' placeholder='Diễn giả' required />
+                                <div className='Speaker-add'>
+                                    <p>Diễn giả</p>
+                                    <FaPlusCircle color={{backgroundColor: 'red'}} size={25} />
+                                </div>
+                                <select
+                                    className='Admin-input-layout'
+                                    value={selectedSpeaker}
+                                    onChange={(e) => setSelectedSpeaker(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Chọn diễn giả</option>
+                                    {speakers.map((speaker) => (
+                                        <option key={speaker.id} value={speaker.id} className='speaker-options'>
+                                            {speaker.name}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             <div className='Admin-radio-container'>
                                 <p>Thể loại :</p>

@@ -7,6 +7,12 @@
 .Account-right-container {
     display: flex;
     flex-direction: row;
+    height: fit-content;
+    width: 100%;
+}
+
+form {
+    width: 100%;
 }
 
 .main-panel {
@@ -14,9 +20,12 @@
 
 }
 
+table {
+    border-spacing: 5px;
+}
+
 .container-admin-table {
     margin: 20px;
-    flex: 1;
 }
 
 .admin-container {
@@ -26,8 +35,15 @@
 
 }
 
+.card {
+    background-color: skyblue;
+    border-radius: 5px;
+    width: fit-content;
+}
+
 .card-body {
     width: 100%;
+
 }
 
 .body-nav-container {
@@ -98,7 +114,6 @@
     display: flex;
     justify-content: flex-end;
     padding: 10px;
-    border: 1px solid;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -115,42 +130,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
+    border: 1px solid blue;
     width: fit-content;
+    font-weight: bold;
     height: auto;
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
-    color: black;
-    cursor: pointer;
-}
-
-.addbutton:hover {
-    background-color: rgb(37, 124, 37);
+    background-color: white;
     color: white;
+    cursor: pointer;
+    background-color: blue;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+
 }
 
-.table-responsive table {
-    width: 100%;
-    border: 1px solid;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 5px;
+table {
+    table-layout: fixed;
 }
 
 .table-responsive th,
 .table-responsive td {
-    flex: 1;
-    border-right: 1px solid;
-    padding: 3px;
+    white-space: nowrap;
+    padding: 5px;
+    border: none;
+    width: fit-content;
+    background-color: white;
 }
 
 .btn-edit {
-    padding: 10px;
-    width: 70px;
+    padding: 5px;
+    width: fit-content;
     margin-left: 5px;
     border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
+    font-size: 15px;
 }
 
 #btn-fix {
@@ -183,6 +204,11 @@
     margin-top: 20px;
     padding: 10px;
     height: fit-content;
+    background-color: rgb(113, 253, 253);
+}
+
+.Account-form input {
+    margin-bottom: 5px;
 }
 
 .Account-input {
@@ -208,6 +234,7 @@
     border: 1px solid;
     padding: 5px;
     margin-top: 20px;
+    background-color: rgb(113, 253, 253);
 }
 
 .Account-user-info div {
@@ -220,14 +247,20 @@
 
 .Account-user-info div img {
     border-radius: 50%;
-    height:150px;
-    width:150px;
+    height: 150px;
+    width: 150px;
     border: 1px solid;
     display: flex;
     margin: auto;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .Account-right-container {
+        width: 768px;
+        overflow-x: scroll;
+        border: 1px solid;
+    }
+}
 
 @media screen and (max-width: 320px) {
     .AdminHolder {
@@ -240,6 +273,22 @@
 
     .container-admin-form {
         justify-content: flex-start;
+    }
+
+    .Account-right-container {
+        flex-direction: column;
+        width: 320px;
+        overflow-x: scroll;
+        border: 1px solid;
+    }
+
+    .container-account-block {
+        order: -1;
+        margin-left: 20px;
+    }
+
+    .Account-form {
+        width: 100%;
     }
 
 }

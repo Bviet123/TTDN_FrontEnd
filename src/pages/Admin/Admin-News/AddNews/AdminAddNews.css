@@ -1,26 +1,25 @@
-.froala-editor-container {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
+.Admin-NewsImage div{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.Admin-NewsImage  div button {
+  display: flex;
+  height: fit-content;
+  border: 1px solid;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 5px;
   
-  .froala-editor-container .fr-box {
-    width: 100% !important;
-  }
-  
-  .froala-editor-container .fr-wrapper {
-    width: 100% !important;
-    overflow-x: auto;
-  }
-  
-  .froala-editor-container .fr-element {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
-  
-  .froala-editor-container .fr-element img,
-  .froala-editor-container .fr-element table {
-    max-width: 100%;
-    height: auto;
-  }
+}
+.Admin-NewsImage div img {
+  width: 150px;
+}
+.Admin-NewsName input {
+  height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 50%;
+}

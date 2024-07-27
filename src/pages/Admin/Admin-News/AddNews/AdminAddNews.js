@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 import './AdminAddNews.css';
 import Aside from '../../../../component-admin/admin-aside/Aside';
-import NewsIconHidden from '../../../../image/nav-icon.png';
+import NewsHidden from '../../../../image/nav-icon.png';
+import NewsImage from '../../../../image/PlayHolder.png';
+import 'froala-editor/js/froala_editor.pkgd.min.js';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import 'froala-editor/css/froala_style.min.css';
 import FroalaEditor from 'react-froala-wysiwyg';
 
-function AdminAddNewsEditor() {
-    const [NewsEditorHint, setNewsEditorHint] = useState(false);
+function AdminAddNews() {
+    const [EditorHint, setEditorHint] = useState(false);
+    
+
     return (
-        <div className="Admin-wrapper" style={{ display: 'flex', height: '100vh' }}>
-            <div className='Admin-sidebar' style={{ display: NewsEditorHint ? 'none' : 'block' }}>
+        <div class="Admin-wrapper">
+
+            <div class='Admin-sidebar' style={{ display: EditorHint ? 'none' : 'block' }}>
                 <Aside />
             </div>
-            <div className="Admin-main-panel" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+            <div class="Admin-main-panel">
                 <div className='Admin-body-nav-container'>
                     <div>
                         <img
                             className="Admin-picHidden"
-                            src={NewsIconHidden}
+                            src={NewsHidden}
                             alt="my pic"
-                            onClick={() => setNewsEditorHint(!NewsEditorHint)}
+                            onClick={() => setEditorHint(!EditorHint)}
                         />
                     </div>
                     <div className='Admin-container-admin-form'>
@@ -30,17 +35,35 @@ function AdminAddNewsEditor() {
                         </div>
                     </div>
                 </div>
-                <div className="Admin-container-admin-table" style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-                    <div className="Admin-page-inner froala-editor-container" style={{ flex: 1, overflow: 'hidden' }}>
-                        <FroalaEditor />
+                <div class="Admin-container-admin-table">
+                    <div class="Admin-page-inner">
+                        <div className='Admin-create-blog'>
+                            <div className='Admin-NewsImage'>
+                                <div >
+                                    <img src={NewsImage} alt='Ảnh tin tức' />
+                                    <button>Sửa ảnh</button>
+                                </div>
+                            </div>
+                            <div className='Admin-NewsName'>
+                                <p>Tên sự kiện:</p>
+                                <input type='text' placeholder='Tên sự kiện'/>
+                            </div>
+                            <div className='Admin-editor'>
+                                <p>Nội dung:</p>
+                                <div className="froala-editor-container">
+                                    <FroalaEditor />
+                                </div>
+                            </div>
+                            <div className='Admin-btn-post'>
+                                <button>Đăng bài</button>
+                            </div>
+                        </div>
                     </div>
-                    <button>Đăng bài</button>
                 </div>
             </div>
+
         </div>
-
-
     );
 }
 
-export default AdminAddNewsEditor;
+export default AdminAddNews;

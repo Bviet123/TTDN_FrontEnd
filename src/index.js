@@ -24,6 +24,7 @@ import AdminAddNewsEditor from './pages/Admin/Admin-News/AddNews/AdminAddNews';
 import AdminNews from './pages/Admin/Admin-News/AdminNews';
 import UserColection from './pages/User/User_EditorColection/EditorColection';
 import NewsColection from './pages/User/User_NewsColection/NewsColection';
+import AdminAddNews from './pages/Admin/Admin-News/AddNews/AdminAddNews';
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
   {
     path: "NewsColection",
     element: <NewsColection />
+  },
+  {
+    path: "AdminAddNews",
+    element: <AdminAddNews/>
   },
 ]);
 

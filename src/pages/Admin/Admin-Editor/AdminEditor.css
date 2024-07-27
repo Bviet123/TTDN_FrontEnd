@@ -102,6 +102,16 @@ html, body, #root {
     width: 50%;
 }
 
+.Speaker-add {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Speaker-add p {
+    margin-right: 10px;
+}
+
 .Admin-EvenName input {
     display: flex;
 }

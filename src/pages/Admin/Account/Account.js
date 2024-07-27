@@ -6,9 +6,11 @@ import AccountAvatar from '../../../image/avatar-holder.jpeg';
 
 function Account() {
     const [AdminHint, setAdminHint] = useState(false);
-    const [EditAccount, setEditAccount] = useState(false);
-    const [ShowAccount, setShowAccount] = useState(false);
-    const [AddAccount, setAddAccount] = useState(false);
+    const [activeSection, setActiveSection] = useState(null);
+    
+    const toggleSection = (section) => {
+        setActiveSection(activeSection === section ? null : section);
+    };
     
     return (
         <div class="wrapper">
@@ -32,55 +34,43 @@ function Account() {
                             <div class="page-inner">
                                 <div class="card">
                                     <div class="card-header">
-                                        <a className='addbutton' onClick={() => setAddAccount(!AddAccount)}>Thêm tài khoản</a>
+                                        <a className='addbutton' onClick={() => toggleSection('add')}>Thêm tài khoản</a>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table>
+                                            <table id='Account-table'>
                                                 <thead>
                                                     <tr>
-                                                        <th>ID</th>
+                                                        <th className='table-id'>ID</th>
                                                         <th>Họ và tên</th>
                                                         <th>Email</th>
-
                                                         <th>Edit</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>1</td>
+                                                        <td className='table-id'>1</td>
                                                         <td>Nguyễn Văn A</td>
                                                         <td>nguyenvana@gmail.com</td>
 
-                                                        <th>
-                                                            <button className='btn-edit' id="btn-fix" onClick={() => setEditAccount(!EditAccount)}>sửa</button>
+                                                        <th className='edit-account-container'>
+                                                            <button className='btn-edit' id="btn-fix" onClick={() => toggleSection('edit')}>Sửa</button>
                                                             <button className='btn-edit' id="btn-delete">Xóa</button>
-                                                            <button className='btn-edit' id="btn-info" onClick={() => setShowAccount(!ShowAccount)}>Thông tin</button>
+                                                            <button className='btn-edit' id="btn-info" onClick={() => toggleSection('show')}>Thông tin</button>
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <td>2</td>
-                                                        <td>Trần Thị B</td>
-                                                        <td>tranthib@gmail.com</td>
+                                                        <td className='table-id'>1</td>
+                                                        <td>Lê Hoài Bão Chung</td>
+                                                        <td>nguyenvana@gmail.com</td>
 
-                                                        <th>
-                                                            <button className='btn-edit' id="btn-fix" onClick={() => setEditAccount(!EditAccount)}>sửa</button>
-                                                            <button className='btn-edit' id="btn-delete" >Xóa</button>
-                                                            <button className='btn-edit' id="btn-info" onClick={() => setShowAccount(!ShowAccount)}>Thông tin</button>
-
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Lê Văn C</td>
-                                                        <td>levanc@gmail.com</td>
-
-                                                        <th>
-                                                            <button className='btn-edit' id="btn-fix" onClick={() => setEditAccount(!EditAccount)}>sửa</button>
+                                                        <th className='edit-account-container'>
+                                                            <button className='btn-edit' id="btn-fix" onClick={() => toggleSection('edit')}>Sửa</button>
                                                             <button className='btn-edit' id="btn-delete">Xóa</button>
-                                                            <button className='btn-edit' id="btn-info" onClick={() => setShowAccount(!ShowAccount)}>Thông tin</button>
+                                                            <button className='btn-edit' id="btn-info" onClick={() => toggleSection('show')}>Thông tin</button>
                                                         </th>
                                                     </tr>
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -89,9 +79,9 @@ function Account() {
                             </div>
                         </div>
                         <div className='container-account-block'>
-                            <div className="Account-Edit-container" style={{ display: EditAccount ? 'block' : 'none' }}>
+                            <div className="Account-Edit-container" style={{ display: activeSection === 'edit' ? 'flex' : 'none' }}>
 
-                                <form>
+                                <form className='Account-form'>
                                     <div>
                                         <label for="username">Tên đăng nhập:</label>
                                         <input className='Account-input' type="text" id="username" name="username" required />
@@ -110,9 +100,9 @@ function Account() {
                                 </form>
                             </div>
                             
-                            <div className="Account-Edit-container" style={{ display: AddAccount ? 'block' : 'none' }}>
+                            <div className="Account-Edit-container" style={{ display: activeSection === 'add' ? 'flex' : 'none' }}>
 
-                                <form>
+                                <form className='Account-form'>
                                     <div>
                                         <label for="username">Tên đăng nhập:</label>
                                         <input className='Account-input' type="text" id="username" name="username" required />
@@ -131,7 +121,7 @@ function Account() {
                                 </form>
                             </div>
 
-                            <div style={{ display: ShowAccount ? 'block' : 'none' }}>
+                            <div style={{ display: activeSection === 'show' ? 'flex' : 'none' }}>
                                 <form className='Account-user-info'>
                                     <div>
                                         <img src={AccountAvatar} alt='Account-UserImage' />

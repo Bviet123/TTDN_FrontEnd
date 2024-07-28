@@ -12,7 +12,8 @@ import {
     FaFileWord,
     FaFilePdf,
     FaFileAlt,
-    FaTimesCircle
+    FaTimesCircle,
+    FaPlusCircle
 } from 'react-icons/fa';
 
 
@@ -21,7 +22,21 @@ function UserEditor() {
     const [FileHint, setFileHint] = useState(false);
     const [files, setFiles] = useState([]);
     const [error, setError] = useState('');
+    const [speakerUser, setSpeakerUser] = useState([
+        { id: 1, name: 'Diễn giả 1' },
+        { id: 2, name: 'Diễn giả 2' },
+        { id: 3, name: 'Diễn giả 3' },
+        
+    ]);
+    const [selectSpeakerUser, setSelectSpeakerUser] = useState('');
 
+    const [locationUser, setLocationUser] = useState([
+        { id: 1, name: 'Địa điểm 1' },
+        { id: 2, name: 'Địa điểm 2' },
+        { id: 3, name: 'Địa điểm 3' },
+        
+    ]);
+    const [selectLocationUser, setSelectLocationUser] = useState('');
 
     const handleFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
@@ -90,7 +105,35 @@ function UserEditor() {
                         </div>
                         <div className='EvenName'>
                             <p>Diễn giả:</p>
-                            <input type='text' className='input-layout' placeholder='diễn giả' required />
+                            <select
+                                    className='user-select'
+                                    value={selectSpeakerUser}
+                                    onChange={(e) => setSelectSpeakerUser(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Chọn diễn giả</option>
+                                    {speakerUser.map((speak) => (
+                                        <option key={speak.id} value={speak.id}>
+                                            {speak.name}
+                                        </option>
+                                    ))}
+                                </select>
+                        </div>
+                        <div className='EvenName'>
+                            <p>Địa điểm:</p>
+                            <select
+                                    className='user-select'
+                                    value={selectLocationUser}
+                                    onChange={(e) => setSelectLocationUser(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Chọn địa điểm</option>
+                                    {locationUser.map((Loca) => (
+                                        <option key={Loca.id} value={Loca.id}>
+                                            {Loca.name}
+                                        </option>
+                                    ))}
+                                </select>
                         </div>
                         <div className='radio-container'>
                             <p>Thể loại :</p>

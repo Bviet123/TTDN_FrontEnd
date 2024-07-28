@@ -80,6 +80,11 @@ html, body, #root {
     height: 100%;
 }
 
+.Admin-EvenName {
+    display: flex;
+    flex-direction: row;
+}
+
 .Admin-input {
     height: auto;
     margin-top: 5px;
@@ -94,12 +99,27 @@ html, body, #root {
     white-space: nowrap;
 }
 
+.Edit-Image-Container button {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+.Edit-Image-Container {
+    display: flex;
+    align-items: center;
+}
+
 .Admin-input-layout {
     border: 1px solid;
     border-radius: 5px;
     height: 30px;
     padding-left: 5px;
     width: 50%;
+}
+.Event-ID input {
+    width: 100px;
 }
 
 .Speaker-add {
@@ -111,9 +131,15 @@ html, body, #root {
 .Speaker-add p {
     margin-right: 10px;
 }
+.Event-Name {
+    border-right: 1px solid;
+    padding-right: 10px;
+    margin-right: 10px;
+}
 
-.Admin-EvenName input {
+.Event-Name input {
     display: flex;
+    width: 300px;
 }
 
 .Admin-radio-container {
@@ -183,5 +209,14 @@ html, body, #root {
 @media screen and (max-width: 320px) {
     .Admin-editor {
         width: 320px;
+    }
+    .Admin-EvenName {
+        flex-direction: column;
+    }
+    .Event-ID {
+        order: -1;
+    }
+    .Event-Name {
+        border: none;
     }
 }

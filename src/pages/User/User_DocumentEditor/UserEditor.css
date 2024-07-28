@@ -16,6 +16,15 @@
 .shower-container div {
     margin-top: 10px;
 }
+
+.user-select {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
+    width: 300px;
+}
+
 .shower-container div span {
     font-size: 18px;
     border: 1px solid;

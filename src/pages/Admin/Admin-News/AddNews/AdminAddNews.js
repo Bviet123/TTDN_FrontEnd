@@ -7,10 +7,17 @@ import 'froala-editor/js/froala_editor.pkgd.min.js';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import 'froala-editor/css/froala_style.min.css';
 import FroalaEditor from 'react-froala-wysiwyg';
+import { FaPlusCircle } from 'react-icons/fa';
 
 function AdminAddNews() {
     const [EditorHint, setEditorHint] = useState(false);
-    
+    const [catalogs, setCatalogs] = useState([
+        { id: 1, name: 'Danh mục 1' },
+        { id: 2, name: 'Danh mục 2' },
+        { id: 3, name: 'Danh mục 3' },
+
+    ]);
+    const [selectedCatalog, setSelectedCatalog] = useState('');
 
     return (
         <div class="Admin-wrapper">
@@ -46,7 +53,26 @@ function AdminAddNews() {
                             </div>
                             <div className='Admin-NewsName'>
                                 <p>Tên sự kiện:</p>
-                                <input type='text' placeholder='Tên sự kiện'/>
+                                <input type='text' placeholder='Tên sự kiện' />
+                            </div>
+                            <div className='Admin-NewsName'>
+                                <div className='Add-catalog'>
+                                    <p>Danh mục</p>
+                                    <FaPlusCircle color={{ backgroundColor: 'red' }} size={25} />
+                                </div>
+                                <select
+                                    className='Catalog-input'
+                                    value={selectedCatalog}
+                                    onChange={(e) => setSelectedCatalog(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Chọn danh mục</option>
+                                    {catalogs.map((Catalog) => (
+                                        <option key={Catalog.id} value={Catalog.id}>
+                                            {Catalog.name}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             <div className='Admin-editor'>
                                 <p>Nội dung:</p>

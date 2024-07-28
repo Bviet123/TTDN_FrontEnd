@@ -6,6 +6,7 @@ import 'froala-editor/js/froala_editor.pkgd.min.js';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import 'froala-editor/css/froala_style.min.css';
 import FroalaEditor from 'react-froala-wysiwyg';
+import ImageEditor from '../../../image/PlayHolder.png';
 
 import {
     FaFileWord,
@@ -26,7 +27,14 @@ function AdminEditor() {
         { id: 3, name: 'Diễn giả 3' },
         // Thêm các diễn giả khác nếu cần
     ]);
+    const [locations, setLocations] = useState([
+        { id: 1, name: 'Địa điểm 1' },
+        { id: 2, name: 'Địa điểm 2' },
+        { id: 3, name: 'Địa điểm 3' },
+        
+    ]);
     const [selectedSpeaker, setSelectedSpeaker] = useState('');
+    const [selectedLocation, setSelectedLocation] = useState('');
 
     const handleAdminFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
@@ -96,14 +104,26 @@ function AdminEditor() {
                             <div className='Admin-shower-container'>
                                 <span onClick={() => setAdminFileHInt(!AdminFileHInt)} >Tệp tài liệu  </span>
                             </div>
+                            <div>
+                                <div className='Edit-Image-Container'>
+                                    <img src={ImageEditor}/>
+                                    <button>Chọn ảnh</button>
+                                </div>
+                            </div>
                             <div className='Admin-EvenName'>
-                                <p>Tên sự kiện:</p>
-                                <input type='text' className='Admin-input-layout' placeholder='Nhập tên sự kiện' required />
+                                <div className='Event-Name'>
+                                    <p>Tên sự kiện:</p>
+                                    <input type='text' className='Admin-input-layout' placeholder='Nhập tên sự kiện' required />
+                                </div>
+                                <div className='Event-ID'>
+                                    <p>Mã sự kiện:</p>
+                                    <input type='text' className='Admin-input-layout' placeholder='Mã sự kiện' required />
+                                </div>
                             </div>
                             <div className='EvenName'>
                                 <div className='Speaker-add'>
                                     <p>Diễn giả</p>
-                                    <FaPlusCircle color={{backgroundColor: 'red'}} size={25} />
+                                    <FaPlusCircle color={{ backgroundColor: 'red' }} size={25} />
                                 </div>
                                 <select
                                     className='Admin-input-layout'
@@ -115,6 +135,25 @@ function AdminEditor() {
                                     {speakers.map((speaker) => (
                                         <option key={speaker.id} value={speaker.id} className='speaker-options'>
                                             {speaker.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className='EvenName'>
+                                <div className='Speaker-add'>
+                                    <p>Địa điểm</p>
+                                    <FaPlusCircle color={{ backgroundColor: 'red' }} size={25} />
+                                </div>
+                                <select
+                                    className='Admin-input-layout'
+                                    value={selectedLocation}
+                                    onChange={(e) => setSelectedLocation(e.target.value)}
+                                    required
+                                >
+                                    <option value="">Chọn địa điểm</option>
+                                    {locations.map((local) => (
+                                        <option key={local.id} value={local.id} >
+                                            {local.name}
                                         </option>
                                     ))}
                                 </select>

@@ -17,7 +17,9 @@ function Competition() {
                     <CompetitionLeft />
                     <div className="competition-content">
                         <div className='competition-table'>
-                            <img src={CompeImg} style={{width: '100%', height: '100px'}}/>
+                            <div>
+                                <img src={CompeImg} style={{ width: '200px', height: '100%' }} />
+                            </div>
                             <div>
                                 <div class="competition-row">
                                     <div class="competition-cell" >
@@ -39,7 +41,7 @@ function Competition() {
                             </div>
                         </div>
 
-                        
+
                         <div className='Compe-pagination'>
                             <button className='Compe-PagesButton'>Pre</button>
                             <div className='Compe-pagesNum'>

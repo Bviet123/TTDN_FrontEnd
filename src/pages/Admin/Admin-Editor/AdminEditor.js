@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './AdminEditor.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
 import IconHidden from '../../../image/nav-icon.png';
@@ -21,6 +21,8 @@ function AdminEditor() {
     const [AdminFileHInt, setAdminFileHInt] = useState(false);
     const [AdminFiles, setAdminFiles] = useState([]);
     const [AdminError, setAdminError] = useState('');
+    const [selectedImage, setSelectedImage] = useState(null);
+    const fileInputRef = useRef(null);
     const [speakers, setSpeakers] = useState([
         { id: 1, name: 'Diễn giả 1' },
         { id: 2, name: 'Diễn giả 2' },
@@ -31,10 +33,24 @@ function AdminEditor() {
         { id: 1, name: 'Địa điểm 1' },
         { id: 2, name: 'Địa điểm 2' },
         { id: 3, name: 'Địa điểm 3' },
-        
+
     ]);
     const [selectedSpeaker, setSelectedSpeaker] = useState('');
     const [selectedLocation, setSelectedLocation] = useState('');
+
+    const handleImageClick = () => {
+        fileInputRef.current.click();
+    };
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                setSelectedImage(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
 
     const handleAdminFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
@@ -106,8 +122,15 @@ function AdminEditor() {
                             </div>
                             <div>
                                 <div className='Edit-Image-Container'>
-                                    <img src={ImageEditor}/>
-                                    <button>Chọn ảnh</button>
+                                    <img src={selectedImage || ImageEditor} alt="Selected" style={{width: '200px', height: '200px'}} />
+                                    <button onClick={handleImageClick}>Chọn ảnh</button>
+                                    <input
+                                        type="file"
+                                        ref={fileInputRef}
+                                        onChange={handleImageChange}
+                                        accept="image/*"
+                                        style={{ display: 'none' }}
+                                    />
                                 </div>
                             </div>
                             <div className='Admin-EvenName'>
@@ -118,6 +141,10 @@ function AdminEditor() {
                                 <div className='Event-ID'>
                                     <p>Mã sự kiện:</p>
                                     <input type='text' className='Admin-input-layout' placeholder='Mã sự kiện' required />
+                                </div>
+                                <div className='Event-ID'>
+                                    <p>Số người:</p>
+                                    <input type='number' className='Admin-input-layout' placeholder='Số người'/>
                                 </div>
                             </div>
                             <div className='EvenName'>
@@ -142,7 +169,7 @@ function AdminEditor() {
                             <div className='EvenName'>
                                 <div className='Speaker-add'>
                                     <p>Địa điểm</p>
-                                    <FaPlusCircle color={{ backgroundColor: 'red' }} size={25} />
+                                    
                                 </div>
                                 <select
                                     className='Admin-input-layout'

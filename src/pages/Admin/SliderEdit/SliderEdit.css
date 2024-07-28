@@ -1,0 +1,27 @@
+.slider-images {
+    width: 600px;
+    height: 150px;
+    border-radius: 5px;
+}
+.add-pic-slider {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.add-pic-slider span {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.add-pic-slider button {
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+}

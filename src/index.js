@@ -26,6 +26,7 @@ import UserColection from './pages/User/User_EditorColection/EditorColection';
 import NewsColection from './pages/User/User_NewsColection/NewsColection';
 import AdminAddNews from './pages/Admin/Admin-News/AddNews/AdminAddNews';
 import SliderEdit from './pages/Admin/SliderEdit/SliderEdit';
+import EventList from './pages/Admin/EventList/EventList';
 
 const router = createBrowserRouter([
   {
@@ -109,6 +110,10 @@ const router = createBrowserRouter([
   {
     path: "SliderEdit",
     element: <SliderEdit/>
+  },
+  {
+    path: "EventList",
+    element: <EventList/>
   },
 ]);
 

@@ -3,10 +3,15 @@ import './SliderEdit.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
 import IconSlider from '../../../image/nav-icon.png';
 import SliderImage from '../../../image/PlayHolder.png';
+import EditModal from './EditModal/EditModal';
 
 function SliderEdit() {
     const [EditorHint, setEditorHint] = useState(false);
-    const [images, setImages] = useState([{ src: SliderImage }]);
+    const [images, setImages] = useState([
+        { src: SliderImage, name: 'Ảnh mặc định', link: '#' }
+    ]);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [editingImage, setEditingImage] = useState(null);
     const fileInputRef = useRef(null);
 
     const handleAddImage = (event) => {
@@ -28,19 +33,20 @@ function SliderEdit() {
     };
 
     const handleEditImage = (index) => {
-        fileInputRef.current.click();
-        fileInputRef.current.onchange = (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const newImages = [...images];
-                    newImages[index] = { src: e.target.result };
-                    setImages(newImages);
-                };
-                reader.readAsDataURL(file);
-            }
+        setEditingImage({ ...images[index], index });
+        setIsModalOpen(true);
+    };
+
+    const handleSaveEdit = (editedImage) => {
+        const newImages = [...images];
+        newImages[editedImage.index] = {
+            src: editedImage.src,
+            name: editedImage.name,
+            link: editedImage.link
         };
+        setImages(newImages);
+        setIsModalOpen(false);
+        setEditingImage(null);
     };
 
     return (
@@ -69,26 +75,33 @@ function SliderEdit() {
                 <div class="Admin-container-admin-table">
                     <div class="Admin-news-inner">
                         <div>
-                            <div className='add-pic-slider'>
-                                <input
-                                    type="file"
-                                    id="imageInput"
-                                    accept="image/*"
-                                    style={{ display: 'none' }}
-                                    onChange={handleAddImage}
-                                />
-                                <span>Bảng hình silder</span>
-                                <button
-                                    style={{ backgroundColor: "blue", color: "white" }}
-                                    onClick={() => document.getElementById('imageInput').click()}
-                                >
-                                    Thêm ảnh
-                                </button>
-                            </div>
-                            <table>
+                            <table id='table-slider'>
                                 <thead>
                                     <tr>
+                                        <th colSpan="5">
+                                            <div className='add-pic-slider'>
+                                                <input
+                                                    type="file"
+                                                    id="imageInput"
+                                                    accept="image/*"
+                                                    style={{ display: 'none' }}
+                                                    onChange={handleAddImage}
+                                                />
+                                                <span>Bảng hình silder</span>
+                                                <button
+                                                    style={{ backgroundColor: "blue", color: "white" }}
+                                                    onClick={() => document.getElementById('imageInput').click()}
+                                                >
+                                                    Thêm ảnh
+                                                </button>
+                                            </div>
+                                        </th>
+
+                                    </tr>
+                                    <tr>
                                         <th>Ảnh</th>
+                                        <th>Tên</th>
+                                        <th>Đường dẫn</th>
                                         <th>Thao tác</th>
                                         <th>Chấp nhận</th>
                                     </tr>
@@ -100,7 +113,17 @@ function SliderEdit() {
                                                 <img src={image.src} alt='Hình' className='slider-images' />
                                             </td>
                                             <td>
-                                                <div className='news-button'>
+                                                <div className='Limit-container'>
+                                                    <span className='slider-Name'>{image.name}</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div className='Limit-container'>
+                                                    <a href={image.link} className='Silder-link'>{image.link}</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div className='slider-button'>
                                                     <span
                                                         style={{ backgroundColor: "red", color: "white", cursor: "pointer" }}
                                                         onClick={() => handleDeleteImage(index)}
@@ -125,15 +148,22 @@ function SliderEdit() {
                                 </tbody>
                             </table>
                             <input
-                            type="file"
-                            ref={fileInputRef}
-                            style={{ display: 'none' }}
-                            accept="image/*"
-                        />
+                                type="file"
+                                ref={fileInputRef}
+                                style={{ display: 'none' }}
+                                accept="image/*"
+                            />
                         </div>
                     </div>
                 </div>
             </div>
+            {isModalOpen && (
+                <EditModal
+                    image={editingImage}
+                    onSave={handleSaveEdit}
+                    onClose={() => setIsModalOpen(false)}
+                />
+            )}
         </div>
     );
 }

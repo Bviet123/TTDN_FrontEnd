@@ -3,6 +3,7 @@ import './EventList.css';
 import Aside from '../../../component-admin/admin-aside/Aside';
 import IconEvent from '../../../image/nav-icon.png';
 import EventImage from '../../../image/PlayHolder.png';
+import LocationModal from '../../Admin/EventList/LocationModal/LocationModal';
 
 function EventList() {
     const [EditorHint, setEditorHint] = useState(false);
@@ -14,9 +15,27 @@ function EventList() {
     ]);
     const [selectedList, setSelectedList] = useState('');
 
+    //Location 
+    const [showLocationModal, setShowLocationModal] = useState(false);
+    const [locations, setLocations] = useState([]);
+    //Add location
+    const handleAddLocation = (newLocation) => {
+        setLocations([...locations, { id: Date.now(), name: newLocation }]);
+    };
+    //Edit location
+    const handleEditLocation = (id, newName) => {
+        setLocations(locations.map(location =>
+            location.id === id ? { ...location, name: newName } : location
+        ));
+    };
+    //Delete location
+    const handleDeleteLocation = (id) => {
+        setLocations(locations.filter(location => location.id !== id));
+    };
+
     return (
         <div class="Admin-wrapper">
-            
+
             <div class='Admin-sidebar' style={{ display: EditorHint ? 'none' : 'block' }}>
                 <Aside />
             </div>
@@ -39,23 +58,30 @@ function EventList() {
                 </div>
                 <div class="Admin-container-admin-table">
                     <div class="Admin-news-inner">
-                        <div>
-                            <button className='Event-Add'>Thêm</button>
-                            <select
-                                className='Event-input-layout'
-                                value={selectedList}
-                                onChange={(e) => setSelectedList(e.target.value)}
-                                required
-                            >
-                                <option value="">Chọn danh sách</option>
-                                {eventList.map((Event) => (
-                                    <option key={Event.id} value={Event.id}>
-                                        {Event.name}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
                         <table className='Event-table'>
+                            <tr>
+                                <th colSpan='4'>
+                                    <div className='header-table'>
+                                        <div>
+                                            <button className='Event-AddLocation' onClick={() => setShowLocationModal(true)}>Địa điểm</button>
+                                            <button className='Event-AddNews'>Thêm tin</button>
+                                        </div>
+                                        <select
+                                            className='Event-input-layout'
+                                            value={selectedList}
+                                            onChange={(e) => setSelectedList(e.target.value)}
+                                            required
+                                        >
+                                            <option value="">Chọn danh sách</option>
+                                            {eventList.map((Event) => (
+                                                <option key={Event.id} value={Event.id}>
+                                                    {Event.name}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                </th>
+                            </tr>
                             <tr>
                                 <th>Thông tin</th>
                                 <th>Thao tác</th>
@@ -82,7 +108,7 @@ function EventList() {
                                     </div>
                                 </td>
                                 <td>
-                                    <div className='news-button'>
+                                    <div className='Event-button'>
                                         <span style={{ backgroundColor: "red", color: "white" }}>Xóa</span>
                                         <span style={{ backgroundColor: "green", color: "white" }}>sửa</span>
                                     </div>
@@ -98,6 +124,14 @@ function EventList() {
                     </div>
                 </div>
             </div>
+            <LocationModal
+                show={showLocationModal}
+                onClose={() => setShowLocationModal(false)}
+                locations={locations}
+                onAdd={handleAddLocation}
+                onEdit={handleEditLocation}
+                onDelete={handleDeleteLocation}
+            />
         </div>
     );
 }

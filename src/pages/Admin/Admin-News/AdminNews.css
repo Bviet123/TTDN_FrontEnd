@@ -1,3 +1,10 @@
+.News-header-table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .news-item-container {
     display: flex;
     max-width: 100%;
@@ -15,10 +22,50 @@
     background-color: white;
 }
 
+table {
+    table-layout: fixed;
+    border-spacing: 5px;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-color: gray;
+}
+
+th, td {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid;
+}
+
 .news-image {
     width: 80px;
     height: 80px;
     border-radius: 5px;
+}
+
+.Event-AddCata {
+    border-radius: 5px;
+    height: 50px;
+    font-size: 20px;
+    width: 130px;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    border-color: brown;
+}
+
+.Event-AddNews {
+    border-radius: 5px;
+    height: 50px;
+    font-size: 20px;
+    width: 100px;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    border-color: blue;
 }
 
 .news-info-container {

@@ -1,0 +1,230 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.UpEdit-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+.UpEdit-sidebar {
+    background-color: #3f5064;
+}
+
+.UpEdit-page-inner {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.UpEdit-main-panel {
+    height: 100%;
+    flex: 1;
+}
+
+.UpEdit-picHidden {
+    display: flex;
+    width: 40px;
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.UpEdit-body-nav-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(155, 128, 74);
+}
+
+.UpEdit-form {
+    display: flex;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.UpEdit-input {
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+
+.UpEdit-admin-submit {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+
+.UpEdit-page-inner {
+    display: flex;
+    flex-direction: row;
+}
+
+.UpEdit-create-blog {
+    width: 100%;
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid;
+
+}
+
+.UpEdit-shower-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.UpEdit-shower-container span {
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.UpEdit-shower-container span:hover {
+    background-color: rgb(252, 185, 97);
+}
+
+.UpEdit-EvenName {
+    display: flex;
+    flex-direction: row;
+}
+
+.UpEdit-Speaker {
+    display: flex;
+    flex-direction: column;
+}
+
+.UpEdit-Name {
+    border-right: 1px solid;
+    padding-right: 10px;
+
+}
+
+.UpEdit-Name input {
+    display: flex;
+    width: 300px;
+}
+
+.UpEdit-Image-Container button {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.UpEdit-Image-Container {
+    display: flex;
+    align-items: center;
+}
+
+.UpEdit-input-layout {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
+    width: 540px;
+}
+
+.UpEdit-ID input {
+    width: 90px;
+}
+
+.UpEdit-ID {
+    margin-left: 10px;
+}
+
+.Speaker-UpEdit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Speaker-UpEdit p {
+    margin-right: 10px;
+}
+
+.UpEdit-radio-container input {
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.UpEdit-radio-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.UpEdit-radio-div {
+    display: flex;
+    width: fit-content;
+}
+
+.UpEdit-editor {
+    flex: 1;
+}
+
+.UpEdit-btn-post {
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+
+}
+
+.UpEdit-btn-post button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+
+}
+
+.UpEdit-btn-post span {
+    font-size: 15px;
+}
+
+.UpEdit-file-select {
+    width: 300px;
+    border: 1px solid;
+    padding: 5px;
+    height: fit-content;
+    margin-left: 3px;
+
+}
+
+.UpEdit-file-select input {
+    overflow-x: scroll;
+}
+
+.UpEdit-delete-icon {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+.UpEdit-file-selector {
+    cursor: pointer;
+    padding: 10px;
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.UpEdit-file-select {
+    width: 300px;
+    border: 1px solid;
+    padding: 5px;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-left: 3px;
+}

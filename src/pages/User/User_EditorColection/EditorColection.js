@@ -12,60 +12,69 @@ import { FaTimesCircle } from 'react-icons/fa';
 
 function UserColection() {
     const [UserHint, setUserHint] = useState(false);
+    const [EditorSelect, setEditorSelect] = useState([
+        { id: 1, name: 'Hội nghị' },
+        { id: 2, name: 'Hội thảo' },
+        { id: 3, name: 'Hội thi' },
 
+    ]);
+    const [selectedItem, setSelectedItem] = useState('');
     return (
-        <div className='Edit-wrapper'>
+        <div className='Editor-wrapper'>
             <div>
                 <Nav />
             </div>
-            <div className='main-user-container'>
-                <div className='Editor-aside' style={{ display: UserHint ? 'none' : 'block' }}>
+            <div className='Editor-user-container'>
+                <div className='Edit-aside' style={{ display: UserHint ? 'none' : 'block' }}>
                     <UserAside />
                 </div>
-                <div className='editor-container'>
-                    <div className='create-blog'>
-                        <div className='shower-container'>
+                <div className='Edit-container'>
+                    <div className='Edit-create-blog'>
+                        <div className='Edit-shower-container'>
                             <img
-                                className="picHint"
+                                className="Edit-picHint"
                                 src={UserIcon}
                                 alt="my hint picture"
                                 onClick={() => setUserHint(!UserHint)}
                             />
                         </div>
-                        <div className='User-container'>
+                        <div className='Edit-container'>
                             <div className='User-colection-container'>
-                                <div className='select-block-container'>
-                                    <div className='conference-block'>
-                                        <span>Hội nghị</span>
-                                        <span>2</span>
-                                    </div>
-                                    <div className='seminar-block'>
-                                        <span> Hội thảo</span>
-                                        <span>1</span>
-                                    </div>
-                                    <div className='competion-block'>
-                                        <span>Hội thi</span>
-                                        <span>1</span>
-                                    </div>
-                                    <div className='sum-block'>
-                                        <span>Tất cả</span>
-                                        <span>4</span>
-                                    </div>
-                                </div>
+
                                 <table>
+                                    <tr>
+                                        <th colSpan='2'>
+                                            <div className='Edit-header-table'>
+                                                <select
+                                                    className='Edit-input-layout'
+                                                    value={selectedItem}
+                                                    onChange={(e) => setSelectedItem(e.target.value)}
+                                                    required
+                                                >
+                                                    <option value="">Tất cả</option>
+                                                    {EditorSelect.map((Items) => (
+                                                        <option key={Items.id} value={Items.id}>
+                                                            {Items.name}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                            </div>
+                                        </th>
+                                    </tr>
                                     <tr>
                                         <th>Thông tin</th>
                                         <th>Thao tác</th>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div className='Admin-news-item'>
-                                                <img src={ImageUserEdit} alt='Hình' className='news-image' />
-                                                <div className='news-info-container'>
-                                                    <div className='info-title-news'>
-                                                        <span className='news-title'>Bất ngờ tại giải đấu chung kết của cuộc thi văn học của tỉnh bình dương 2024</span>
+                                            <div className='Admin-Edit-item'>
+                                                <img src={ImageUserEdit} alt='Hình' className='Edit-image' />
+                                                <div className='Edit-info-container'>
+                                                    <div className='info-title-Edit'>
+                                                        <span className='Edit-title'>Bất ngờ tại giải đấu chung kết của cuộc thi văn học của tỉnh bình dương 2024</span>
                                                     </div>
-                                                    <div className='info-news'>
+                                                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                                    <div className='info-Edit'>
                                                         <span>Người đăng: Lê Văn Chung</span>
                                                         <span>Ngày Đăng: 20/07/2024</span>
                                                     </div>
@@ -73,30 +82,8 @@ function UserColection() {
                                             </div>
                                         </td>
                                         <td>
-                                            <div className='news-button'>
-                                                <FaTimesCircle className='delete-icon' size={30} />
-                                            </div>
-                                        </td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div className='Admin-news-item'>
-                                                <img src={ImageUserEdit} alt='Hình' className='news-image' />
-                                                <div className='news-info-container'>
-                                                    <div className='info-title-news'>
-                                                        <span className='news-title'>Bất ngờ tại giải đấu chung kết của cuộc thi văn học của tỉnh bình dương 2024</span>
-                                                    </div>
-                                                    <div className='info-news'>
-                                                        <span>Người đăng: Lê Văn Chung</span>
-                                                        <span>Ngày Đăng: 20/07/2024</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div className='news-button'>
-                                                <FaTimesCircle className='delete-icon' size={30} />
+                                            <div className='Edit-button'>
+                                                <FaTimesCircle className='Edit-delete-icon' size={30} />
                                             </div>
                                         </td>
 

@@ -1,11 +1,174 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Editor-wrapper {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: fit-content;
+    background-color: #EEEEEE;
+    
+}
+
+.Editor-user-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.Edit-aside {
+    border: 1px solid;
+    width: 250px;
+    background-color: #686D76;
+}
+
+.Edit-create-blog {
+    width: fit-content;
+    flex: 1;
+    padding: 10px;
+    border: 1px solid;
+
+}
+
+.Edit-container {
+    flex: 1;
+    display: flex;
+}
+
+.Edit-picHint {
+    display: flex;
+    width: 40px;
+    
+}
+
+.Edit-shower-container {
+    display: flex;
+    justify-content: space-between;
+}
+.Edit-shower-container div {
+    margin-top: 10px;
+}
+
+.Edit-header-table {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Admin-Edit-item {
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.Edit-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.Edit-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-title-Edit span {
+    font-size: 15px;
+    max-width: 100%;
+    min-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.Edit-input-layout {
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 170px;
+    font-size: 18px;
+    order: -1;
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 5px;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-color: gray;
+}
+
+th, td {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid;
+}
+
+.info-Edit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-Edit span {
+    font-size: 13px;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+.Edit-button {
+    margin: auto;
+}
+
+.Edit-delete-icon {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+}
+
+.Edit-shower-container div span {
+    font-size: 18px;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 5px;
+}
+.Edit-shower-container span:hover {
+    background-color: rgb(252, 185, 97);
+}
+
+.Admin-sidebar {
+    background-color: #3f5064;
+}
+
 .select-block-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid;
-    border-top:1px solid;
+    border-top: 1px solid;
     margin-bottom: 10px;
 }
+
 .select-block-container div {
     display: flex;
     flex-direction: column;
@@ -16,15 +179,19 @@
     width: 150px;
     cursor: pointer;
 }
+
 .seminar-block {
     background-color: coral;
 }
+
 .conference-block {
     background-color: burlywood;
 }
+
 .competion-block {
     background-color: chocolate;
 }
+
 .sum-block {
     background-color: antiquewhite;
 }

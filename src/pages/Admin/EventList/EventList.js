@@ -34,30 +34,30 @@ function EventList() {
     };
 
     return (
-        <div class="Admin-wrapper">
+        <div class="Event-wrapper">
 
-            <div class='Admin-sidebar' style={{ display: EditorHint ? 'none' : 'block' }}>
+            <div class='Event-sidebar' style={{ display: EditorHint ? 'none' : 'block' }}>
                 <Aside />
             </div>
-            <div class="Admin-main-panel">
-                <div className='Admin-body-nav-container'>
+            <div class="Event-main-panel">
+                <div className='Event-body-nav-container'>
                     <div>
                         <img
-                            className="Admin-picHidden"
+                            className="Event-picHidden"
                             src={IconEvent}
                             alt="my pic"
                             onClick={() => setEditorHint(!EditorHint)}
                         />
                     </div>
-                    <div className='Admin-container-admin-form'>
-                        <div className='Admin-form'>
-                            <input type='text' placeholder='TÌm kiếm .....' className='Admin-input' />
+                    <div className='Event-container-admin-form'>
+                        <div className='Event-form'>
+                            <input type='text' placeholder='TÌm kiếm .....' className='Event-input' />
                             <button className='Admin-admin-submit'>Tìm kiếm</button>
                         </div>
                     </div>
                 </div>
-                <div class="Admin-container-admin-table">
-                    <div class="Admin-news-inner">
+                <div class="Event-container-admin-table">
+                    <div class="Admin-Event-inner">
                         <table className='Event-table'>
                             <tr>
                                 <th colSpan='4'>
@@ -109,8 +109,8 @@ function EventList() {
                                 </td>
                                 <td>
                                     <div className='Event-button'>
-                                        <span style={{ backgroundColor: "red", color: "white" }}>Xóa</span>
-                                        <span style={{ backgroundColor: "green", color: "white" }}>sửa</span>
+                                        <button style={{ backgroundColor: "red", color: "white" }}>Xóa</button>
+                                        <button style={{ backgroundColor: "green", color: "white" }}>sửa</button>
                                     </div>
                                 </td>
                                 <td>

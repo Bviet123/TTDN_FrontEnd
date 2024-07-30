@@ -31,8 +31,12 @@
 .modal-save {
     background-color: green;
     border-radius: 5px;
+    height: 25px;
+    color: white;
 }
 .modal-out {
     background-color: red;
     border-radius: 5px;
+    height: 25px;
+    color: white;
 }

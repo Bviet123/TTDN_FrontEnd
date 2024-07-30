@@ -1,3 +1,46 @@
+.Event-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    width: 100%;
+    background-color: #EEEEEE;
+}
+.Event-sidebar {
+    background-color: #3f5064;
+}
+
+.Event-main-panel {
+    height: 100%;
+    flex: 1;
+}
+
+.Event-form {
+    display: flex;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.Event-input {
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+
+.Event-picHidden {
+    display: flex;
+    width: 40px;
+    border: 1px solid;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.Event-body-nav-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(155, 128, 74);
+}
+
 .Event-items {
     display: flex;
     padding: 10px;
@@ -93,13 +136,14 @@
     order: -1;
 }
 
-.Event-button span {
+.Event-button button {
     display: flex;
     justify-content: center;
     font-size: 15px;
     border: 1px solid;
     border-radius: 5px;
     margin: auto;
+    padding: 10px;
 }
 
 

@@ -54,13 +54,13 @@ function CatagoryModal({ show, onClose, catagories = [], onAdd, onEdit, onDelete
     return (
         <div className="modal-catagory">
             <div className="modal-catagory-content">
-                <h2>Quản lý địa điểm</h2>
+                <h2>Quản lý Danh mục</h2>
                 <div className="catagory-input">
                     <input
                         type="text"
                         value={newCatagory}
                         onChange={(e) => setNewCatagory(e.target.value)}
-                        placeholder={ediCataId !== null ? "Sửa địa điểm" : "Nhập địa điểm mới"}
+                        placeholder={ediCataId !== null ? "Sửa danh mục" : "Nhập danh mục mới"}
                     />
                     <button onClick={handleSubmit} className='modal-catagory-add'>
                         {ediCataId !== null ? 'Cập nhật' : 'Thêm'}
@@ -72,7 +72,7 @@ function CatagoryModal({ show, onClose, catagories = [], onAdd, onEdit, onDelete
                         type="text"
                         value={searchList}
                         onChange={(e) => setSearchList(e.target.value)}
-                        placeholder="Tìm kiếm địa điểm"
+                        placeholder="Tìm kiếm danh mục"
                     />
                 </div>
                 <ul className="catagory-list">
@@ -90,7 +90,7 @@ function CatagoryModal({ show, onClose, catagories = [], onAdd, onEdit, onDelete
             </div>
             <ConfirmModal
                 show={showModal}
-                message="Bạn có chắc chắn muốn xóa địa điểm này?"
+                message="Bạn có chắc chắn muốn xóa?"
                 onConfirm={handleConfirmDelete}
                 onCancel={() => setShowModal(false)}
             />

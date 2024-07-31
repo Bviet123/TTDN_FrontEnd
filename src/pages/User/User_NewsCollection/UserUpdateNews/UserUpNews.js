@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import './UserAddNews.css';
+import './UserUpNews.css';
 import FroalaEditor from 'react-froala-wysiwyg';
 import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
@@ -11,16 +11,12 @@ import Nav from '../../../../component-news/NavigationBar/Nav';
 import Foot from '../../../../component-news/FootContainer/Foot';
 
 import {
-    FaFileWord,
-    FaFilePdf,
-    FaFileAlt,
-    FaTimesCircle,
     FaPlusCircle
 } from 'react-icons/fa';
 
 
-function UserAddNews() {
-    const [AddNewsHint, setAddNewsHint] = useState(false);
+function UserUpdateNews() {
+    const [UpNewsHint, setUpNewsHint] = useState(false);
     const [Newscatalogs, setNewscatalogs] = useState([
         { id: 1, name: 'Danh mục 1' },
         { id: 2, name: 'Danh mục 2' },
@@ -30,39 +26,39 @@ function UserAddNews() {
     const [selectedNews, setSelectedNews] = useState('');
 
     return (
-        <div className='Add-wrapper'>
+        <div className='Update-wrapper'>
             <div>
                 <Nav />
             </div>
-            <div className='main-NewsAdd-container'>
-                <div className='NewsAdd-aside' style={{ display: AddNewsHint ? 'none' : 'block' }}>
+            <div className='main-NewsUp-container'>
+                <div className='NewsUp-aside' style={{ display: UpNewsHint ? 'none' : 'block' }}>
                     <UserAside />
                 </div>
-                <div className='NewsAdd-container'>
-                    <div className='NewsAdd-create-blog'>
+                <div className='NewsUp-container'>
+                    <div className='NewsUp-create-blog'>
                         <img
-                            className="NewsAdd-picHint"
+                            className="NewsUp-picHint"
                             src={IconHint}
                             alt="my hint picture"
-                            onClick={() => setAddNewsHint(!AddNewsHint)}
+                            onClick={() => setUpNewsHint(!UpNewsHint)}
                         />
-                        <div className='NewsAdd-NewsImage'>
+                        <div className='NewsUp-NewsImage'>
                             <div >
                                 <img src={PlaceImage} alt='Ảnh tin tức' />
                                 <button>Sửa ảnh</button>
                             </div>
                         </div>
-                        <div className='NewsAdd-NewsName'>
+                        <div className='NewsUp-NewsName'>
                             <p>Tên sự kiện:</p>
                             <input type='text' placeholder='Tên sự kiện' />
                         </div>
-                        <div className='NewsAdd-NewsName'>
-                            <div className='NewsAdd-catalog'>
+                        <div className='NewsUp-NewsName'>
+                            <div className='NewsUp-catalog'>
                                 <p>Danh mục</p>
                                 <FaPlusCircle color={{ backgroundColor: 'red' }} size={25} />
                             </div>
                             <select
-                                className='NewsAdd-Catalog-input'
+                                className='NewsUp-Catalog-input'
                                 value={selectedNews}
                                 onChange={(e) => setSelectedNews(e.target.value)}
                                 required
@@ -75,13 +71,13 @@ function UserAddNews() {
                                 ))}
                             </select>
                         </div>
-                        <div className='NewsAdd-editor'>
+                        <div className='NewsUp-editor'>
                             <p>Nội dung:</p>
                             <div className="froala-editor-container">
                                 <FroalaEditor />
                             </div>
                         </div>
-                        <div className='NewsAdd-btn-post'>
+                        <div className='NewsUp-btn-post'>
                             <button>Đăng bài</button>
                         </div>
                     </div>
@@ -95,4 +91,4 @@ function UserAddNews() {
 
     );
 }
-export default UserAddNews;
+export default UserUpdateNews;

@@ -29,6 +29,8 @@ import SliderEdit from './pages/Admin/SliderEdit/SliderEdit';
 import EventList from './pages/Admin/EventList/EventList';
 import UpdateEditor from './pages/Admin/Admin-Editor/UpdateEditor/UpdateEditor';
 import UpdateNews from './pages/Admin/Admin-News/UpdateNews/UpdateNews';
+import UserAddNews from './pages/User/User_NewsCollection/UserAddNews/UserAddNews';
+import UserUpdateNews from './pages/User/User_NewsCollection/UserUpdateNews/UserUpNews';
 
 const router = createBrowserRouter([
   {
@@ -124,6 +126,14 @@ const router = createBrowserRouter([
   {
     path: "UpdateNews",
     element: <UpdateNews/>
+  },
+  {
+    path: "UserAddNews",
+    element: <UserAddNews/>
+  },
+  {
+    path: "UserUpdateNews",
+    element: <UserUpdateNews/>
   },
 ]);
 

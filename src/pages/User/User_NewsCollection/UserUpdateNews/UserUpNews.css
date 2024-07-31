@@ -7,7 +7,7 @@ body,
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.Add-wrapper {
+.Update-wrapper {
     padding: 0;
     margin: 0;
     display: flex;
@@ -18,13 +18,13 @@ body,
 
 }
 
-.main-NewsAdd-container {
+.main-NewsUp-container {
     display: flex;
     flex: 1;
     flex-direction: row;
 }
 
-.NewsAdd-create-blog {
+.NewsUp-create-blog {
     width: fit-content;
     flex: 1;
     padding: 10px;
@@ -32,7 +32,7 @@ body,
 
 }
 
-.NewsAdd-shower-container div span {
+.NewsUp-shower-container div span {
     font-size: 18px;
     border: 1px solid;
     border-radius: 5px;
@@ -41,50 +41,50 @@ body,
     margin-left: 5px;
 }
 
-.NewsAdd-shower-container span:hover {
+.NewsUp-shower-container span:hover {
     background-color: rgb(252, 185, 97);
 }
 
-.NewsAdd-shower-container {
+.NewsUp-shower-container {
     display: flex;
     justify-content: space-between;
 }
 
-.NewsAdd-shower-container div {
+.NewsUp-shower-container div {
     margin-top: 10px;
 }
 
-.NewsAdd-picHint {
+.NewsUp-picHint {
     display: flex;
     width: 40px;
     margin-bottom: 10px;
 
 }
 
-.NewsAdd-container {
+.NewsUp-container {
     flex: 1;
     display: flex;
     overflow-x: scroll;
 }
 
-.NewsAdd-aside {
+.NewsUp-aside {
     border: 1px solid;
     width: 250px;
     background-color: #686D76;
 
 }
 
-.NewsAdd-NewsImage div img {
+.NewsUp-NewsImage div img {
     width: 150px;
 }
 
-.NewsAdd-NewsImage div {
+.NewsUp-NewsImage div {
     width: fit-content;
     display: flex;
     align-items: center;
 }
 
-.NewsAdd-NewsImage div button {
+.NewsUp-NewsImage div button {
     display: flex;
     height: fit-content;
     border: 1px solid;
@@ -95,23 +95,23 @@ body,
 
 }
 
-.NewsAdd-NewsName input {
+.NewsUp-NewsName input {
     height: 30px;
     border: 1px solid;
     border-radius: 5px;
     width: 50%;
 }
 
-.NewsAdd-catalog {
+.NewsUp-catalog {
     display: flex;
     align-items: center;
 }
 
-.NewsAdd-catalog p {
+.NewsUp-catalog p {
     margin-right: 20px;
 }
 
-.NewsAdd-Catalog-input {
+.NewsUp-Catalog-input {
     border: 1px solid;
     border-radius: 5px;
     height: 30px;
@@ -119,18 +119,18 @@ body,
     width: 30%;
 }
 
-.NewsAdd-btn-post {
+.NewsUp-btn-post {
     padding: 10px;
     width: fit-content;
     margin: auto;
 }
 
-.NewsAdd-btn-post button {
+.NewsUp-btn-post button {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid;
 }
 
-.NewsAdd-editor {
+.NewsUp-editor {
     flex: 1;
 }

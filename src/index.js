@@ -23,7 +23,7 @@ import EditAccount from './pages/Admin/Account/UpdateAccount/UpdateAccount';
 import AdminAddNewsEditor from './pages/Admin/Admin-News/AddNews/AdminAddNews';
 import AdminNews from './pages/Admin/Admin-News/AdminNews';
 import UserColection from './pages/User/User_EditorColection/EditorColection';
-import NewsColection from './pages/User/User_NewsColection/NewsColection';
+import NewsCollection from './pages/User/User_NewsCollection/NewsCollection';
 import AdminAddNews from './pages/Admin/Admin-News/AddNews/AdminAddNews';
 import SliderEdit from './pages/Admin/SliderEdit/SliderEdit';
 import EventList from './pages/Admin/EventList/EventList';
@@ -102,8 +102,8 @@ const router = createBrowserRouter([
     element: <UserColection />
   },
   {
-    path: "NewsColection",
-    element: <NewsColection />
+    path: "NewsCollection",
+    element: <NewsCollection />
   },
   {
     path: "AdminAddNews",

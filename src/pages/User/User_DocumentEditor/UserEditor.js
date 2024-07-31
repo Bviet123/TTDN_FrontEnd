@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './UserEditor.css';
 import Nav from '../../../component-news/NavigationBar/Nav';
 import Foot from '../../../component-news/FootContainer/Foot';
@@ -8,6 +8,8 @@ import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import 'froala-editor/js/plugins/image.min.js';
 import IconHint from '../../../image/nav-icon.png';
+import PlaceImage from '../../../image/PlayHolder.png';
+
 import {
     FaFileWord,
     FaFilePdf,
@@ -22,11 +24,13 @@ function UserEditor() {
     const [FileHint, setFileHint] = useState(false);
     const [files, setFiles] = useState([]);
     const [error, setError] = useState('');
+    const [selectedImage, setSelectedImage] = useState(null);
+    const fileInputRef = useRef(null);
     const [speakerUser, setSpeakerUser] = useState([
         { id: 1, name: 'Diễn giả 1' },
         { id: 2, name: 'Diễn giả 2' },
         { id: 3, name: 'Diễn giả 3' },
-        
+
     ]);
     const [selectSpeakerUser, setSelectSpeakerUser] = useState('');
 
@@ -34,10 +38,23 @@ function UserEditor() {
         { id: 1, name: 'Địa điểm 1' },
         { id: 2, name: 'Địa điểm 2' },
         { id: 3, name: 'Địa điểm 3' },
-        
+
     ]);
     const [selectLocationUser, setSelectLocationUser] = useState('');
 
+    const handleImageClick = () => {
+        fileInputRef.current.click();
+    };
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                setSelectedImage(e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
+    }
     const handleFileChange = (event) => {
         const selectedFiles = Array.from(event.target.files);
         const allowedExtensions = ['doc', 'docx', 'pdf'];
@@ -97,43 +114,67 @@ function UserEditor() {
                             />
                             <div>
                                 <span onClick={() => setFileHint(!FileHint)} >Tệp tài liệu  </span>
+
                             </div>
                         </div>
-                        <div className='EvenName'>
-                            <p>Tên sự kiện:</p>
-                            <input type='text' className='input-layout' placeholder='Nhập tên sự kiện' required />
+                        <div>
+                            <div className='User-Image-Container'>
+                                <img src={selectedImage || PlaceImage} alt="Selected" style={{ width: '200px', height: '200px' }} />
+                                <button onClick={handleImageClick}>Chọn ảnh</button>
+                                <input
+                                    type="file"
+                                    ref={fileInputRef}
+                                    onChange={handleImageChange}
+                                    accept="image/*"
+                                    style={{ display: 'none' }}
+                                />
+                            </div>
                         </div>
-                        <div className='EvenName'>
+                        <div className='User-EvenName'>
+                            <div className='User-Event-Name'>
+                                <p>Tên sự kiện:</p>
+                                <input type='text' className='User-input-layout' placeholder='Nhập tên sự kiện' required />
+                            </div>
+                            <div className='User-ID'>
+                                <p>Mã sự kiện:</p>
+                                <input type='text' className='User-input-layout' placeholder='Mã sự kiện' required />
+                            </div>
+                            <div className='User-ID'>
+                                <p>Số người:</p>
+                                <input type='number' className='User-input-layout' placeholder='Số người' />
+                            </div>
+                        </div>
+                        <div className='User-Even-Name'>
                             <p>Diễn giả:</p>
                             <select
-                                    className='user-select'
-                                    value={selectSpeakerUser}
-                                    onChange={(e) => setSelectSpeakerUser(e.target.value)}
-                                    required
-                                >
-                                    <option value="">Chọn diễn giả</option>
-                                    {speakerUser.map((speak) => (
-                                        <option key={speak.id} value={speak.id}>
-                                            {speak.name}
-                                        </option>
-                                    ))}
-                                </select>
+                                className='user-select'
+                                value={selectSpeakerUser}
+                                onChange={(e) => setSelectSpeakerUser(e.target.value)}
+                                required
+                            >
+                                <option value="">Chọn diễn giả</option>
+                                {speakerUser.map((speak) => (
+                                    <option key={speak.id} value={speak.id}>
+                                        {speak.name}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
-                        <div className='EvenName'>
+                        <div className='User-Even-Name'>
                             <p>Địa điểm:</p>
                             <select
-                                    className='user-select'
-                                    value={selectLocationUser}
-                                    onChange={(e) => setSelectLocationUser(e.target.value)}
-                                    required
-                                >
-                                    <option value="">Chọn địa điểm</option>
-                                    {locationUser.map((Loca) => (
-                                        <option key={Loca.id} value={Loca.id}>
-                                            {Loca.name}
-                                        </option>
-                                    ))}
-                                </select>
+                                className='user-select'
+                                value={selectLocationUser}
+                                onChange={(e) => setSelectLocationUser(e.target.value)}
+                                required
+                            >
+                                <option value="">Chọn địa điểm</option>
+                                {locationUser.map((Loca) => (
+                                    <option key={Loca.id} value={Loca.id}>
+                                        {Loca.name}
+                                    </option>
+                                ))}
+                            </select>
                         </div>
                         <div className='radio-container'>
                             <p>Thể loại :</p>

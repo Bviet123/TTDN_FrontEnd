@@ -31,6 +31,7 @@ import UpdateEditor from './pages/Admin/Admin-Editor/UpdateEditor/UpdateEditor';
 import UpdateNews from './pages/Admin/Admin-News/UpdateNews/UpdateNews';
 import UserAddNews from './pages/User/User_NewsCollection/UserAddNews/UserAddNews';
 import UserUpdateNews from './pages/User/User_NewsCollection/UserUpdateNews/UserUpNews';
+import UserUpdateEditor from './pages/User/User_DocumentEditor/UserUpdateEditor/UserUpdateEditor';
 
 const router = createBrowserRouter([
   {
@@ -134,6 +135,10 @@ const router = createBrowserRouter([
   {
     path: "UserUpdateNews",
     element: <UserUpdateNews/>
+  },
+  {
+    path: "UserUpdateEditor",
+    element: <UserUpdateEditor/>
   },
 ]);
 

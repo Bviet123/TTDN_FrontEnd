@@ -1,0 +1,115 @@
+.comments-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.comments-section textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.comments-section button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.comments-list {
+    margin-top: 10px;
+}
+
+.comment {
+    background-color: #f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    /* Cho phép từ dài xuống dòng */
+    overflow-wrap: break-word;
+    /* Hỗ trợ tốt hơn cho các trình duyệt mới */
+}
+
+.comment p {
+    white-space: pre-wrap;
+    /* Giữ nguyên định dạng xuống dòng và khoảng trắng */
+    word-break: break-word;
+    /* Cho phép từ dài bị ngắt để xuống dòng */
+    max-width: 100%;
+    /* Đảm bảo nội dung không vượt quá chiều rộng của container */
+}
+
+.Comment-area {
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.Card-comment {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.comment-header div {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid;
+}
+
+.author {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.date {
+    color: #666;
+    font-size: 0.8em;
+}
+
+.replies {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.like-action,
+.reply-action,
+.show-replies-action {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 0.9em;
+}
+
+.like-action:hover,
+.reply-action:hover,
+.show-replies-action:hover {
+    text-decoration: underline;
+}
+
+.replies {
+    margin-left: 20px;
+    margin-top: 10px;
+}

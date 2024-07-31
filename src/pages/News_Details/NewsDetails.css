@@ -1,3 +1,12 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .App {
     background-color: #D3D3D3;
     background-repeat: no-repeat;
@@ -11,6 +20,13 @@
     margin-right: 3px;
 }
 
+.Content-inner {
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+}
+
 .Detail-container {
     display: flex;
     flex-direction: row;
@@ -18,17 +34,13 @@
 }
 
 .content-right {
-    float: right;
-
-}
-
-.content-left {
-    float: left;
+    display: flex;
+    justify-content: space-between;
 }
 
 .content-title {
     justify-content: center;
-    margin-top: 60px;
+
     font-size: x-large;
     font-weight: 650;
 
@@ -59,5 +71,5 @@
     .NewsDetails_Text {
         font-size: 15px;
     }
-    
+
 }

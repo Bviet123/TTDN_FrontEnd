@@ -57,6 +57,15 @@ th, td {
     border-color: brown;
 }
 
+.News-input-layout {
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 170px;
+    font-size: 18px;
+    order: -1;
+}
+
 .Event-AddNews {
     border-radius: 5px;
     height: 50px;

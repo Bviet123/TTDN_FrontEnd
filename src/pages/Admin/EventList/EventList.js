@@ -4,6 +4,7 @@ import Aside from '../../../component-admin/admin-aside/Aside';
 import IconEvent from '../../../image/nav-icon.png';
 import EventImage from '../../../image/PlayHolder.png';
 import LocationModal from '../../Admin/EventList/LocationModal/LocationModal';
+import RegistrationModal from './RegistrationModal/RegistrationModal';
 
 function EventList() {
     const [EditorHint, setEditorHint] = useState(false);
@@ -13,6 +14,7 @@ function EventList() {
         { id: 3, name: 'Hội thi' },
 
     ]);
+
     const [selectedList, setSelectedList] = useState('');
 
     //Location 
@@ -32,6 +34,17 @@ function EventList() {
     const handleDeleteLocation = (id) => {
         setLocations(locations.filter(location => location.id !== id));
     };
+
+    const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+    const [registrations, setRegistrations] = useState([
+        { id: 1, name: 'Nguyễn Văn A sdsd sdsdsd sdsd', registerDate: '2024-08-01' },
+        { id: 2, name: 'Trần Thị B', registerDate: '2024-08-02' },
+    ]);
+    // Show Registration List
+    const handleOpenRegistrationModal = () => {
+        setShowRegistrationModal(true);
+    };
+
 
     return (
         <div class="Event-wrapper">
@@ -58,7 +71,7 @@ function EventList() {
                 </div>
                 <div class="Event-container-admin-table">
                     <div class="Admin-Event-inner">
-                        <table className='Event-table'>
+                        <table id='Event-table'>
                             <tr>
                                 <th colSpan='4'>
                                     <div className='header-table'>
@@ -95,10 +108,10 @@ function EventList() {
                                         <img src={EventImage} alt='Hình' className='Event-image' />
                                         <div className='Event-info-container'>
                                             <div className='info-title-Event'>
-                                                <span className='Event-title'>Bất ngờ tại giải đấu chung kết của cuộc thi văn học của tỉnh bình dương 2024</span>
+                                                <span id='Event-title'>Bất ngờ tại giải đấu chung kết của cuộc thi văn học của tỉnh bình dương 2024</span>
                                             </div>
                                             <div className='Event-Description'>
-                                                <span>Trong trận chung kết của giải đấu tuyển thủ lê bình khiêm đã xuất sắc thể hiện....</span>
+                                                <p>Trong trận chung kết của giải đấu tuyển thủ lê bình khiêm đã xuất sắc thể hiệnaa aaaaa a aa aaaaaa aa aa aaa aaa aaaa aaa aaaaa</p>
                                             </div>
                                             <div className='info-Event'>
                                                 <span>Người đăng: Lê Văn Chung</span>
@@ -109,6 +122,7 @@ function EventList() {
                                 </td>
                                 <td>
                                     <div className='Event-button'>
+                                        <button style={{ backgroundColor: "darkseagreen", color: "white" }} onClick={handleOpenRegistrationModal}>Danh sách đăng kí</button>
                                         <button style={{ backgroundColor: "red", color: "white" }}>Xóa</button>
                                         <button style={{ backgroundColor: "green", color: "white" }}>sửa</button>
                                     </div>
@@ -131,6 +145,11 @@ function EventList() {
                 onAdd={handleAddLocation}
                 onEdit={handleEditLocation}
                 onDelete={handleDeleteLocation}
+            />
+            <RegistrationModal
+                show={showRegistrationModal}
+                onClose={() => setShowRegistrationModal(false)}
+                registrations={registrations}
             />
         </div>
     );

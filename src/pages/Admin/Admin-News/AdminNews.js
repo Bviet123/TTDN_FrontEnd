@@ -7,6 +7,13 @@ import CatagoryModal from './CatagoryModal/CatagoryModal';
 
 function AdminNews() {
     const [EditorHint, setEditorHint] = useState(false);
+    const [TypesList, setTypesList] = useState([
+        { id: 1, name: 'Thể loại 1' },
+        { id: 2, name: 'Thể loại 2' },
+        { id: 3, name: 'Thể loại 3' },
+
+    ]);
+    const [selectTypesList, setSelectTypesList] = useState('');
 
     //Catagory 
     const [showCataModal, setShowCataModal] = useState(false);
@@ -55,6 +62,19 @@ function AdminNews() {
                             <tr>
                                 <th colSpan='4'>
                                     <div className='News-header-table'>
+                                        <select
+                                            className='News-input-layout'
+                                            value={selectTypesList}
+                                            onChange={(e) => setSelectTypesList(e.target.value)}
+                                            required
+                                        >
+                                            <option value="">Tất cả</option>
+                                            {TypesList.map((Type) => (
+                                                <option key={Type.id} value={Type.id}>
+                                                    {Type.name}
+                                                </option>
+                                            ))}
+                                        </select>
                                         <div>
                                             <button className='Event-AddCata' onClick={() => setShowCataModal(true)}>Danh mục</button>
                                             <button className='Event-AddNews'>Thêm tin</button>

@@ -32,6 +32,7 @@ import UpdateNews from './pages/Admin/Admin-News/UpdateNews/UpdateNews';
 import UserAddNews from './pages/User/User_NewsCollection/UserAddNews/UserAddNews';
 import UserUpdateNews from './pages/User/User_NewsCollection/UserUpdateNews/UserUpNews';
 import UserUpdateEditor from './pages/User/User_DocumentEditor/UserUpdateEditor/UserUpdateEditor';
+import UserEventList from './pages/User/UserEventList/UserEventList';
 
 const router = createBrowserRouter([
   {
@@ -139,6 +140,10 @@ const router = createBrowserRouter([
   {
     path: "UserUpdateEditor",
     element: <UserUpdateEditor/>
+  },
+  {
+    path: "UserEventList",
+    element: <UserEventList/>
   },
 ]);
 

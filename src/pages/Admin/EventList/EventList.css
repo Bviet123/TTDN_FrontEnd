@@ -5,6 +5,7 @@
     width: 100%;
     background-color: #EEEEEE;
 }
+
 .Event-sidebar {
     background-color: #3f5064;
 }
@@ -50,36 +51,50 @@
     flex-direction: row;
     width: fit-content;
 }
+
 .Event-image {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height:auto;
     border-radius: 5px;
 }
+
 .Event-info-container {
     display: flex;
     flex-direction: column;
 }
+
 .info-Event {
     display: flex;
     justify-content: space-between;
 
 }
-.Event-Description span {
-    font-size: 15px;
-    display: flex;
-    justify-content: flex-start;
-}
+
 .info-title-Event span {
     font-size: 15px;
-    max-width: 100%;
-    min-width: 150px;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     color: blue;
     cursor: pointer;
     font-weight: bold;
+    height: fit-content;
 }
+
+.info-title-Event {
+    display: flex;
+    overflow: hidden;
+    height: 30px;
+    text-align: left;
+}
+
+#Event-title {
+    margin-top: 0;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 1.5;              
+}
+
 .header-table {
     width: 100%;
     display: flex;
@@ -93,6 +108,16 @@
     font-size: 13px;
 }
 
+.Event-Description {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 10px;
+    
+}
+
 .Event-AddNews {
     border-radius: 5px;
     height: 50px;
@@ -101,10 +126,11 @@
     font-weight: bold;
     margin: 5px;
     cursor: pointer;
-    border-color:blue;
+    border-color: blue;
 }
+
 .Event-AddNews:hover {
-    background-color:  rgb(71, 71, 252);
+    background-color: rgb(71, 71, 252);
     color: white;
 }
 
@@ -116,8 +142,9 @@
     font-weight: bold;
     margin: 5px;
     cursor: pointer;
-    border-color:brown;
+    border-color: brown;
 }
+
 .Event-AddLocation:hover {
     background-color: rgb(165, 69, 69);
     color: white;
@@ -147,8 +174,8 @@
 }
 
 
-.Event-table th,
-.Event-table td {
+#Event-table th,
+#Event-table td {
     width: fit-content;
     text-align: center;
     padding: 10px;

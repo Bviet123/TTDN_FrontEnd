@@ -122,7 +122,7 @@ function AdminEditor() {
                             </div>
                             <div>
                                 <div className='Edit-Image-Container'>
-                                    <img src={selectedImage || ImageEditor} alt="Selected" style={{width: '200px', height: '200px'}} />
+                                    <img src={selectedImage || ImageEditor} alt="Selected" style={{ width: '200px', height: '200px' }} />
                                     <button onClick={handleImageClick}>Chọn ảnh</button>
                                     <input
                                         type="file"
@@ -144,10 +144,14 @@ function AdminEditor() {
                                 </div>
                                 <div className='Event-ID'>
                                     <p>Số người:</p>
-                                    <input type='number' className='Admin-input-layout' placeholder='Số người'/>
+                                    <input type='number' className='Admin-input-layout' placeholder='Số người' />
                                 </div>
                             </div>
                             <div className='EvenName'>
+                                <div>
+                                    <p>Ngày bắt đầu:</p>
+                                    <input type='date' className='Admin-input-layout' />
+                                </div>
                                 <div className='Speaker-add'>
                                     <p>Diễn giả</p>
                                     <FaPlusCircle color={{ backgroundColor: 'red' }} size={25} />
@@ -167,9 +171,12 @@ function AdminEditor() {
                                 </select>
                             </div>
                             <div className='EvenName'>
+                                <div>
+                                    <p>Ngày bắt đầu:</p>
+                                    <input type='date' className='Admin-input-layout' />
+                                </div>
                                 <div className='Speaker-add'>
                                     <p>Địa điểm</p>
-                                    
                                 </div>
                                 <select
                                     className='Admin-input-layout'

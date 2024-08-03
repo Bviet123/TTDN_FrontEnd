@@ -1,3 +1,12 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -18,10 +27,6 @@ form {
 .main-panel {
     flex: 1;
 
-}
-
-table {
-    border-spacing: 5px;
 }
 
 .container-admin-table {
@@ -151,44 +156,92 @@ table {
 
 }
 
-table {
-    table-layout: fixed;
+.Password-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.table-responsive th,
-.table-responsive td {
-    white-space: nowrap;
-    padding: 5px;
-    border: none;
-    width: fit-content;
-    background-color: white;
-}
-
-.btn-edit {
-    padding: 5px;
-    width: fit-content;
-    margin-left: 5px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
+.Password-column span {
     font-size: 15px;
 }
 
+.Password-column button {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+#Account-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+#Account-table th,
+#Account-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#Account-table thead {
+    background-color: #f2f2f2;
+}
+
+#Account-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-id {
+    width: 50px;
+}
+
+.edit-account-container {
+    width: fit-content;
+    
+    margin: auto;
+}
+
+.Accont-input-layout {
+    width: 96%;
+    height: 30px;
+
+}
+
+.btn-edit {
+    padding: 6px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 #btn-fix {
-    background-color: rgb(96, 96, 243);
+    background-color: #4CAF50;
     color: white;
 }
 
 #btn-delete {
-    background-color: rgb(253, 82, 82);
+    background-color: #f44336;
     color: white;
 }
 
 #btn-info {
-    background-color: cadetblue;
+    background-color: #008CBA;
     color: white;
-    white-space: nowrap;
-    width: auto;
+}
+
+.btn-edit:hover {
+    opacity: 0.8;
+}
+
+#Account-table tr:hover {
+    background-color: #f5f5f5;
 }
 
 .admin-sidebar {

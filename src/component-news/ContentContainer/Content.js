@@ -1,15 +1,28 @@
 import './Content.css';
 import itemPic from './PlayHolder.png';
-import PauseOnHover from './silder';
+import itemPic1 from '../../image/PlayHolder.png';
+import itemPic2 from '../../image/meme_fish.jpg';
+import itemPic3 from '../../image/Power.jpeg';
+import itemPic4 from '../../image/img-shadow.png';
+import itemPic5 from '../../image/PlayHolder.png';
+import Slider from './silder';
+
 
 
 function Content() {
+    const slides = [
+        { image: itemPic1, alt: "Slide 1" },
+        { image: itemPic2, alt: "Slide 2" },
+        { image: itemPic3, alt: "Slide 3" },
+        { image: itemPic4, alt: "Slide 4" },
+        { image: itemPic5, alt: "Slide 5" },
+    ];
 
     return (
         <div className="content">
             <div className='slider-slide'>
                 <div className='slider-div'>
-                    <PauseOnHover />
+                    <Slider slides={slides} />
                 </div>
             </div>
             <div className="News_container">
